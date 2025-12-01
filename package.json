@@ -15,6 +15,7 @@
     "compress:images": "node scripts/compress-public-images.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.86.0",
     "browser-image-compression": "^2.0.2",
     "mongodb": "^7.0.0",
