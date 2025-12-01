@@ -7,33 +7,38 @@ export function UploadImageClient() {
   const [previewUrl, setPreviewUrl] = React.useState<string | null>(null);
   const [uploading, setUploading] = React.useState(false);
 
-  const handleChangeFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const compressImage = (file: File, size: number) =>
+    imageCompression(file, {
+      maxWidthOrHeight: size,
+      initialQuality: 0.7,
+      fileType: 'image/jpeg',
+      useWebWorker: true,
+    });
+
+  const handleChangeFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (!file) return;
 
+    setUploading(true);
+
     try {
-      setUploading(true);
+      // 1) 원본 압축 (1920px)
+      const original = await compressImage(file, 1920);
 
-      // 1) 브라우저에서 이미지 압축
-      const compressed = await imageCompression(file, {
-        maxWidthOrHeight: 1920, // 리사이즈 (픽셀 감소)
-        initialQuality: 0.6, // JPG 품질 70% 느낌
-        useWebWorker: true,
-      });
+      // 2) 썸네일 압축 (500px)
+      const thumbnail = await compressImage(file, 500);
 
-      console.log(
-        'before:',
-        file.size,
-        'after:',
-        compressed.size,
-        'ratio:',
-        (compressed.size / file.size).toFixed(2),
-      );
+      // 3) 파일명 생성
+      const timestamp = Date.now();
+      const rand = Math.random().toString(36).substring(2, 6);
 
-      // 2) 압축된 파일을 FormData 로 업로드
+      const originalName = `${timestamp}_${rand}.jpg`;
+      const thumbName = `${timestamp}_${rand}_thumb.jpg`;
+
+      // 4) FormData 만들기 (파일 2개)
       const formData = new FormData();
-      // 파일 이름은 기존 이름 유지 (확장자 포함)
-      formData.append('file', compressed, file.name);
+      formData.append('file_original', original, originalName);
+      formData.append('file_thumb', thumbnail, thumbName);
 
       const res = await fetch('/api/upload', {
         method: 'POST',
@@ -41,34 +46,25 @@ export function UploadImageClient() {
       });
 
       const data = await res.json();
-      console.log('upload result:', data);
-
       if (!res.ok || !data.ok) {
-        alert(`업로드 실패: ${data.message ?? 'unknown error'}`);
+        alert('업로드 실패');
         return;
       }
 
-      setPreviewUrl(data.url);
-    } catch (error) {
-      console.error(error);
-      alert('압축 또는 업로드 중 오류가 발생했습니다.');
+      // 대표로 원본 preview
+      setPreviewUrl(data.url_original);
+    } catch {
+      alert('업로드 중 오류');
     } finally {
       setUploading(false);
     }
   };
 
   return (
-    <React.Fragment>
-      <div>
-        <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleChangeFile} />
-      </div>
+    <>
+      <input type="file" accept="image/*" onChange={handleChangeFile} />
       {uploading && <p>업로드 중...</p>}
-      {previewUrl && (
-        <div>
-          <p>업로드 결과:</p>
-          <img src={previewUrl} alt="uploaded" style={{ maxWidth: '300px', height: 'auto' }} />
-        </div>
-      )}
-    </React.Fragment>
+      {previewUrl && <img src={previewUrl} style={{ maxWidth: 300 }} />}
+    </>
   );
 }

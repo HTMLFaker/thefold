@@ -4,42 +4,56 @@ import { supabase } from '@/lib/supabase';
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const file = formData.get('file');
 
-    if (!(file instanceof File)) {
-      return NextResponse.json({ ok: false, message: 'file 필드가 필요합니다.' }, { status: 400 });
+    const original = formData.get('file_original');
+    const thumb = formData.get('file_thumb');
+
+    if (!(original instanceof File) || !(thumb instanceof File)) {
+      return NextResponse.json(
+        { ok: false, message: 'file_original / file_thumb 둘 다 필요합니다.' },
+        { status: 400 },
+      );
     }
 
-    const ext = file.name.split('.').pop();
-    const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
-    const filePath = `uploads/${fileName}`;
+    // 파일명 그대로 사용 → 클라이언트에서 timestamp+랜덤 생성한 이름
+    const originalPath = `uploads/${original.name}`;
+    const thumbPath = `uploads/${thumb.name}`;
 
-    const { data, error } = await supabase.storage
-      .from('images') // 버킷 이름
-      .upload(filePath, file, {
+    // 업로드 helper
+    const uploadFile = async (path: string, file: File) => {
+      return supabase.storage.from('images').upload(path, file, {
         cacheControl: '3600',
         upsert: false,
       });
+    };
 
-    if (error) {
-      console.error('supabase upload error:', error);
+    const [origRes, thumbRes] = await Promise.all([
+      uploadFile(originalPath, original),
+      uploadFile(thumbPath, thumb),
+    ]);
+
+    if (origRes.error || thumbRes.error) {
       return NextResponse.json(
-        { ok: false, message: 'upload failed', detail: error.message },
+        {
+          ok: false,
+          message: 'upload failed',
+          detail: origRes.error?.message || thumbRes.error?.message,
+        },
         { status: 500 },
       );
     }
 
-    const {
-      data: { publicUrl },
-    } = supabase.storage.from('images').getPublicUrl(filePath);
+    const { data: origUrl } = supabase.storage.from('images').getPublicUrl(originalPath);
+    const { data: thumbUrl } = supabase.storage.from('images').getPublicUrl(thumbPath);
 
     return NextResponse.json({
       ok: true,
-      path: data?.path,
-      url: publicUrl,
+      url_original: origUrl.publicUrl,
+      url_thumb: thumbUrl.publicUrl,
+      path_original: origRes.data.path,
+      path_thumb: thumbRes.data.path,
     });
-  } catch (error) {
-    console.error(error);
+  } catch {
     return NextResponse.json({ ok: false, message: 'unexpected error' }, { status: 500 });
   }
 }
