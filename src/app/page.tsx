@@ -1,4 +1,5 @@
 import { HomeClient } from '@/components/HomeClient';
+import { UploadImageClient } from '@/components/UploadImageClient';
 import Link from 'next/link';
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Link href="/about">회사소개</Link> / <Link href="/greeting">인사말</Link>
       </p>
       <HomeClient />
+      <UploadImageClient />
     </main>
   );
 }
