@@ -1,3 +1,4 @@
+import { HomeClient } from '@/components/HomeClient';
 import Link from 'next/link';
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <p>
         <Link href="/about">회사소개</Link> / <Link href="/greeting">인사말</Link>
       </p>
+      <HomeClient />
     </main>
   );
 }
