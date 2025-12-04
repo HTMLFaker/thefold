@@ -1,7 +1,6 @@
 import FadeSlideshow from '@/components/common/FadeSlideShow';
 import FoldingLine from '@/components/common/FoldingLine';
 import Swiper from '@/components/common/Swiper';
-import GlassWipe from '@/components/GlassWipe';
 import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
 import Link from 'next/link';
@@ -15,7 +14,7 @@ export default function HomePage() {
   return (
     <main>
       <FadeSlideshow />
-      <Swiper
+      {/* <Swiper
         isArrow
         isBounce
         isPaginate
@@ -24,22 +23,7 @@ export default function HomePage() {
         duration={0.5}
         moveRange={0.3}
         sensitivity={0.5}
-      >
-        {/* <div className="visual_image image1"></div>
-        <div className="visual_image image2"></div>
-        <div className="visual_image image3"></div> */}
-        {/* <GlassWipe src="/main1.jpg" durationMs={5000} />
-
-        <div className="wipe-container">
-       
-          <img src="/main2.jpg" alt="main" className="wipe-image" />
-
- 
-          <img src="/main2.jpg" alt="main blurred" className="wipe-image wipe-image--blur" />
-        </div>
-
-        <img src="/main3.jpg" alt="" /> */}
-      </Swiper>
+      ></Swiper> */}
 
       <h1>더폴드</h1>
       <header className="header">
