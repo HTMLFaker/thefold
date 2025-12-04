@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
+import VisitorCount from '@/components/VisitorCount';
 
 export default function AdminPage() {
   const router = useRouter();
@@ -51,6 +52,8 @@ export default function AdminPage() {
         >
           로그아웃
         </button>
+
+        <VisitorCount />
       </main>
     </React.Fragment>
   );

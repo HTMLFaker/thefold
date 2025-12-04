@@ -1,0 +1,121 @@
+.header {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 1200px;
+  transform: translateX(-50%);
+
+  height: 80px;
+}
+
+.navigation {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  ul {
+    li {
+      float: left;
+      margin-left: 0;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        display: block;
+        position: relative;
+
+        font-size: 1.8rem;
+        line-height: 1.5em;
+        padding: 10px 30px;
+
+        color: #fff;
+
+        &:before,
+        &:after {
+          position: absolute;
+          transition: 0.3s all ease-out;
+        }
+        &:before {
+          bottom: 0;
+          left: 50%;
+
+          height: 2px;
+          background-color: rgba(255, 255, 255, 0.15);
+          content: '';
+          width: 0;
+        }
+        &:after {
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 0;
+          background-color: rgba(255, 255, 255, 0.15);
+          content: '';
+          z-index: -1;
+        }
+        &:hover {
+          &:before {
+            left: 0;
+            width: 100%;
+          }
+          &:after {
+            height: 100%;
+          }
+        }
+
+        // &:after {
+        //   position: absolute;
+        //   top: 50%;
+        //   right: 0;
+        //   background-color: #fff;
+        //   width: 1px;
+        //   height: 20px;
+        //   margin-top: -9px;
+        //   opacity: 0.2;
+        //   content: '';
+        // }
+      }
+    }
+  }
+}
+
+.quick_menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    img {
+      height: 25px;
+      filter: invert(1);
+    }
+  }
+}
+
+.logow {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+
+  .logo {
+    font-family: 'Raleway';
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.9;
+    // text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .slogan {
+    font-family: 'Raleway';
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-left: 5px;
+  }
+}

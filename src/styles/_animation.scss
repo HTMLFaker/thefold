@@ -1,0 +1,79 @@
+.folding-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+}
+
+.folding_line_start {
+  position: relative;
+  width: 1px; // default value
+  height: 10px; // default value
+  transform-origin: center center;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: segment-folding-line-start;
+  left: 0;
+  .folding_line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    &.folding_line1 {
+      top: 0;
+    }
+    &.folding_line2 {
+      bottom: 0;
+      transform-origin: bottom center;
+      animation-name: segment-folding-line2;
+    }
+    &.folding_line3 {
+      bottom: 0;
+      transform-origin: top center;
+      animation-name: segment-folding-line3;
+    }
+    &.folding_line4 {
+      bottom: 0;
+      transform-origin: bottom center;
+      animation-name: segment-folding-line4;
+    }
+  }
+}
+@keyframes segment-folding-line-start {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 10px;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes segment-folding-line2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes segment-folding-line3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes segment-folding-line4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
