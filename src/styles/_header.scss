@@ -4,7 +4,7 @@
   top: 0;
   left: 50%;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   transform: translateX(-50%);
 
   height: 80px;
@@ -13,7 +13,7 @@
 .navigation {
   position: absolute;
   top: 50px;
-  left: 250px;
+  left: 350px;
   ul {
     li {
       float: left;
@@ -85,26 +85,34 @@
   top: 60px;
   right: 0;
   li {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 20px;
+    float: left;
+
+    padding: 10px;
     img {
-      height: 25px;
+      width: 30px;
+      height: 30px;
       filter: invert(1);
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
     }
   }
 }
 
 .logow {
   position: absolute;
-  top: 50px;
+  top: 35px;
   left: 0;
   width: 300px;
   height: 300px;
+  .logo_image {
+    float: left;
+  }
 
   .logo {
+    margin-top: 8px;
     font-family: 'Raleway';
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     font-weight: 400;
     opacity: 0.9;
@@ -112,7 +120,7 @@
   }
   .slogan {
     font-family: 'Raleway';
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
     font-weight: 700;
     opacity: 0.7;

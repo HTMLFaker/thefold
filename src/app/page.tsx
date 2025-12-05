@@ -3,6 +3,7 @@ import FoldingLine from '@/components/common/FoldingLine';
 import Swiper from '@/components/common/Swiper';
 import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
@@ -28,6 +29,9 @@ export default function HomePage() {
       <h1>더폴드</h1>
       <header className="header">
         <div className="logow">
+          <span className="logo_image">
+            <Image src={'/logo.png'} alt="" width={70} height={70} />
+          </span>
           <h1 className="logo">THE FOLD</h1>
           <p className="slogan">Open Your Space</p>
         </div>
