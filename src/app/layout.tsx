@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://thefold.kr',
+    url: 'https://thefold-eight.vercel.app/',
     siteName: '더폴드',
     title: '더폴드 | 글라스 폴딩도어 시공 전문업체',
     description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://thefold.kr',
+    canonical: 'https://thefold-eight.vercel.app/',
   },
 };
 
