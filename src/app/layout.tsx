@@ -4,7 +4,7 @@ import VisitTracker from '@/components/common/VisitTracker';
 import ResourceReporter from '@/components/common/ResourceReporter';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://thefold.kr'),
+  metadataBase: new URL('https://thefold-eight.vercel.app/'),
   title: {
     default: '더폴드 | 글라스 폴딩도어 시공 전문업체',
     template: '%s | 더폴드',
