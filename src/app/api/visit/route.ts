@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { MongoClient } from 'mongodb';
+import { getKSTDateString } from '@/util/date';
 
 const client = new MongoClient(process.env.MONGODB_URI as string);
 const dbName = process.env.MONGODB_DB as string;
 
 export async function GET(req: NextRequest) {
   const db = client.db(dbName);
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  const today = getKSTDateString();
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? '0.0.0.0';
 
   // 하루 1회만 기록
