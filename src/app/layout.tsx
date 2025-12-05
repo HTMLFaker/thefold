@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/index.scss';
+import VisitTracker from '@/components/common/VisitTracker';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thefold.kr'),
@@ -63,6 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <VisitTracker />
       <body>{children}</body>
     </html>
   );
