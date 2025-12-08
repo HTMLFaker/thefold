@@ -57,6 +57,7 @@
   }
 
   .btn_header_toggle {
+    display: none;
     position: absolute;
     top: 0;
     right: 20px;
@@ -224,6 +225,9 @@
   .header {
     padding: 0;
     .header_inner {
+    }
+    .btn_header_toggle {
+      display: block;
     }
     .header_brand {
       scale: 0.8;
