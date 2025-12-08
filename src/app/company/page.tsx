@@ -1,13 +1,43 @@
+import { VisualLoader } from '@/components/common/VisualLoader';
+import Header from '../_components/Header';
+
 export const metadata = {
   title: '회사소개 | 더폴드',
   description: '회사소개 | 더폴드',
 };
 
-export default function GreetingPage() {
+export default function CompanyPage() {
   return (
-    <main>
-      <h1>회사소개 | 더폴드</h1>
-      <p>회사소개 | 더폴드</p>
-    </main>
+    <div className="wrapper sub">
+      <VisualLoader />
+      <Header />
+      <main className="main"></main>
+      <footer>
+        asdf
+        <br />
+        askldfjsaljdfjksdasdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+        asdf
+        <br />
+      </footer>
+    </div>
   );
 }

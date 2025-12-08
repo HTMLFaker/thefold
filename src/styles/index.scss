@@ -20,16 +20,10 @@ body {
     .wrapper {
       opacity: 0;
     }
-    .folding_wrapper {
-      opacity: 1;
-    }
   }
   &.is-loaded {
     .wrapper {
       opacity: 1;
-    }
-    .folding_wrapper {
-      opacity: 0;
     }
   }
 }
@@ -41,8 +35,18 @@ body {
   &.main {
     background-color: #d59a5f;
   }
+  &.sub {
+    background-color: #d59a5f;
+  }
 }
 
 main {
   flex: 1;
+}
+
+.visual_video {
+  video {
+    display: block;
+    width: 100%;
+  }
 }

@@ -1,24 +1,24 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect } from 'react';
 
 export function VisualLoader() {
   useEffect(() => {
-    const img = new window.Image();
-    img.src = '/visual1.jpg';
+    const urls = ['/visual1.jpg', '/visual2.jpg', '/visual3.jpg'];
 
-    img.onload = () => {
+    const preload = (url: string) =>
+      new Promise<void>((resolve) => {
+        const img = new window.Image();
+        img.src = url;
+        img.onload = () => resolve();
+        img.onerror = () => resolve();
+      });
+
+    Promise.all(urls.map(preload)).then(() => {
       document.body.classList.add('is-loaded');
       document.body.classList.remove('loading');
-    };
-
-    img.onerror = () => {
-      // 안전장치: 에러나도 보여주긴 해야 함
-      document.body.classList.add('is-loaded');
-      document.body.classList.remove('loading');
-    };
+    });
   }, []);
 
-  return null; // 렌더링 없음
+  return null;
 }

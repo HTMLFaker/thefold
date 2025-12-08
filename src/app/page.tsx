@@ -5,6 +5,7 @@ import { UploadImageClient } from '@/components/UploadImageClient';
 import Header from './_components/Header';
 import { VisualLoader } from '@/components/common/VisualLoader';
 import React from 'react';
+import Video from '@/components/main/Video';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -14,16 +15,13 @@ export const metadata = {
 export default function HomePage() {
   return (
     <React.Fragment>
-      <div className="folding-wrapper">
-        <FoldingLine width={2} height={40} />
-      </div>
       <div className="wrapper">
         <VisualLoader />
         <Header />
 
         <main className="main">
           <FadeSlideshow />
-
+          <Video />
           <HomeClient />
           <UploadImageClient />
         </main>
