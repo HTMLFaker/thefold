@@ -107,6 +107,7 @@
       // &:first-child {
       //   margin-left: 0;
       // }
+      &.is-open,
       &:hover {
         .sub_lst {
           height: auto;

@@ -3,6 +3,7 @@ import FoldingLine from '@/components/common/FoldingLine';
 import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
 import Header from './_components/Header';
+import { VisualLoader } from '@/components/common/VisualLoader';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -12,6 +13,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main className="main">
+      <VisualLoader />
       <Header />
 
       <FadeSlideshow />

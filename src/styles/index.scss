@@ -14,4 +14,10 @@ body {
 }
 body {
   background-color: #d59a5f;
+  &.loading {
+    opacity: 0;
+  }
+  &.is-loaded {
+    opacity: 1;
+  }
 }

@@ -65,10 +65,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <VisitTracker />
       <ResourceReporter />
-      <body>{children}</body>
+      <body className="loading">{children}</body>
 
       <HeaderControl />
     </html>
