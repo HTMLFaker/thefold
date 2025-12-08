@@ -82,7 +82,7 @@
     .lnk {
       display: block;
       position: relative;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 30px;
       padding: 5px 30px;
       color: #fff;
@@ -119,14 +119,14 @@
     }
     .sub_lst {
       opacity: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 40px;
       left: 0;
       overflow: hidden;
       width: 0;
       transition: 0.2s all ease-in-out;
-      padding: 20px 0;
+      padding: 21px 0;
     }
     .sub_itm {
     }
@@ -145,7 +145,7 @@
         width: 1px;
         height: 11px;
         background-color: rgba(255, 255, 255, 0.5);
-        transition: 0.2s all ease-in-out;
+        transition: 0.5s all ease-in-out;
         content: '';
       }
       &:after {
@@ -155,12 +155,12 @@
         width: 11px;
         height: 1px;
         background-color: rgba(255, 255, 255, 0.5);
-        transition: 0.2s all ease-in-out;
+        transition: 0.5s all ease-in-out;
         content: '';
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(174, 146, 56, 0.3);
         &:before {
           transform: rotate(360deg);
         }
@@ -188,14 +188,14 @@
         margin-left: 0;
       }
       .img {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         filter: invert(1);
       }
     }
     .lnk {
       display: block;
-      padding: 10px;
+      padding: 13px;
       transition: 0.3s background-color ease-in-out;
       &:hover {
         background-color: rgba(255, 255, 255, 0.15);
