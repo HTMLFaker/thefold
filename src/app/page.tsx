@@ -4,6 +4,7 @@ import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
 import Header from './_components/Header';
 import { VisualLoader } from '@/components/common/VisualLoader';
+import React from 'react';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -12,18 +13,48 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="main">
-      <VisualLoader />
-      <Header />
+    <React.Fragment>
+      <div className="folding-wrapper">
+        <FoldingLine width={2} height={40} />
+      </div>
+      <div className="wrapper">
+        <VisualLoader />
+        <Header />
 
-      <FadeSlideshow />
+        <main className="main">
+          <FadeSlideshow />
 
-      {/* <div className="folding-wrapper">
-        <FoldingLine width={1} height={20} />
-      </div> */}
+          <HomeClient />
+          <UploadImageClient />
+        </main>
 
-      <HomeClient />
-      <UploadImageClient />
-    </main>
+        <footer>
+          asdf
+          <br />
+          askldfjsaljdfjksdasdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+          asdf
+          <br />
+        </footer>
+      </div>
+    </React.Fragment>
   );
 }
