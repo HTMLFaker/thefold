@@ -153,8 +153,9 @@
 
 @media (max-width: 1024px) {
   .visual_wrapper {
-    height: 700px;
+    height: 600px;
     .copy-wrapper {
+      bottom: 30px;
       .copy-tag {
         margin-left: 30px;
         font-size: 14px;
