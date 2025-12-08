@@ -150,3 +150,25 @@
 .copy-tag.active {
   transform: translateY(0);
 }
+
+@media (max-width: 1024px) {
+  .visual_wrapper {
+    height: 700px;
+    .copy-wrapper {
+      .copy-tag {
+        margin-left: 30px;
+        font-size: 14px;
+      }
+      .copy-title {
+        margin-left: 30px;
+        margin-top: 0;
+        font-size: 30px;
+      }
+      .copy-desc {
+        margin-left: 30px;
+        margin-top: 0;
+        font-size: 18px;
+      }
+    }
+  }
+}

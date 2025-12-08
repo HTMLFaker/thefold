@@ -56,6 +56,25 @@
     }
   }
 
+  .btn_header_toggle {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 20px;
+    cursor: pointer;
+    .sp_menu {
+      display: block;
+      overflow: hidden;
+      width: 40px;
+      height: 40px;
+      background: url('/menu.png') no-repeat 0 0 / 100% 100%;
+      filter: invert(1);
+    }
+  }
+
   .main_menu {
     padding: 20px 0 20px 100px;
     .lst {
@@ -138,27 +157,26 @@
       color: #fff;
       white-space: nowrap;
       padding: 10px 0 10px 50px;
-      &:before {
+      transition: 0.15s all ease-in-out;
+      &:before,
+      &:after {
         position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: 0.5s all ease-in-out;
+        content: '';
+      }
+      &:before {
         top: 19px;
         left: 35px;
         width: 1px;
         height: 11px;
-        background-color: rgba(255, 255, 255, 0.5);
-        transition: 0.5s all ease-in-out;
-        content: '';
       }
       &:after {
-        position: absolute;
         top: 24px;
         left: 30px;
         width: 11px;
         height: 1px;
-        background-color: rgba(255, 255, 255, 0.5);
-        transition: 0.5s all ease-in-out;
-        content: '';
       }
-
       &:hover {
         background-color: rgba(174, 146, 56, 0.3);
         &:before {
@@ -183,10 +201,7 @@
     }
     .itm {
       float: left;
-      margin-left: 10px;
-      &:first-child {
-        margin-left: 0;
-      }
+
       .img {
         width: 24px;
         height: 24px;
@@ -196,10 +211,28 @@
     .lnk {
       display: block;
       padding: 13px;
-      transition: 0.3s background-color ease-in-out;
+      transition: 0.15s background-color ease-in-out;
+      border-radius: 5px;
       &:hover {
         background-color: rgba(255, 255, 255, 0.15);
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0;
+    .header_inner {
+    }
+    .header_brand {
+      scale: 0.8;
+    }
+    .main_menu {
+      display: none;
+    }
+    .quick_menu {
+      display: none;
     }
   }
 }

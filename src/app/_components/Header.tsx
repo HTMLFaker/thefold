@@ -9,6 +9,9 @@ export default function Header() {
           <h1 className="title">THE FOLD</h1>
           <p className="slogan">이게 진짜 폴딩도어다!</p>
         </Link>
+        <button type="button" className="btn_header_toggle">
+          <span className="sp sp_menu">토글</span>
+        </button>
         <nav className="main_menu" aria-label="주요 메뉴">
           <ul className="lst">
             <li className="itm">
