@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/styles/index.scss';
 import VisitTracker from '@/components/common/VisitTracker';
 import ResourceReporter from '@/components/common/ResourceReporter';
+import HeaderControl from '@/components/domControls/HeaderControl';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thefold-eight.vercel.app/'),
@@ -68,6 +69,8 @@ export default function RootLayout({
       <VisitTracker />
       <ResourceReporter />
       <body>{children}</body>
+
+      <HeaderControl />
     </html>
   );
 }

@@ -1,129 +1,142 @@
 .header {
   z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  max-width: 1920px;
-  transform: translateX(-50%);
-
-  height: 80px;
-}
-
-.navigation {
-  position: absolute;
+  position: fixed;
   top: 50px;
-  left: 350px;
-  ul {
-    li {
+  right: 0;
+  left: 0;
+  padding: 0 50px;
+  transition: 0.1s all ease-in-out;
+
+  &.is_top {
+    top: 50px !important;
+    background: none !important;
+  }
+  &.is_scroll_down {
+    top: -80px;
+  }
+  &.is_scroll_up {
+    top: 0px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .header_inner {
+      top: 0;
+    }
+  }
+
+  .header_inner {
+    display: flex;
+    position: relative;
+    max-width: 1920px;
+    min-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .header_brand {
+    display: block;
+    // margin-right: auto;
+    font-family: 'Raleway', 'Pretendard', sans-serif;
+    background: url('/logo.png') no-repeat 0 0 / 80px 80px;
+    padding: 10px 10px 10px 80px;
+    .title {
+      color: #fff;
+      font-weight: 400;
+      font-size: 33px;
+      line-height: 40px;
+    }
+    .slogan {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .main_menu {
+    padding: 20px 0 20px 100px;
+    .lst {
+      &:after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+    }
+    .itm {
       float: left;
-      margin-left: 0;
+      // &:first-child {
+      //   margin-left: 0;
+      // }
+    }
+    .lnk {
+      display: block;
+      position: relative;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 5px 30px;
+      color: #fff;
+
+      &:before,
+      &:after {
+        position: absolute;
+        transition: 0.3s all ease-out;
+        background-color: rgba(255, 255, 255, 0.15);
+        content: '';
+      }
+      &:before {
+        bottom: 0;
+        left: 50%;
+        height: 2px;
+        width: 0;
+      }
+      &:after {
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        z-index: -1;
+      }
+      &:hover {
+        &:before {
+          left: 0;
+          width: 100%;
+        }
+        &:after {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .quick_menu {
+    margin-left: auto;
+    padding: 15px 0;
+    .lst {
+      &:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+    }
+    .itm {
+      float: left;
+      margin-left: 10px;
       &:first-child {
         margin-left: 0;
       }
-      a {
-        display: block;
-        position: relative;
-
-        font-size: 1.8rem;
-        line-height: 1.5em;
-        padding: 10px 30px;
-
-        color: #fff;
-
-        &:before,
-        &:after {
-          position: absolute;
-          transition: 0.3s all ease-out;
-        }
-        &:before {
-          bottom: 0;
-          left: 50%;
-
-          height: 2px;
-          background-color: rgba(255, 255, 255, 0.15);
-          content: '';
-          width: 0;
-        }
-        &:after {
-          right: 0;
-          bottom: 0;
-          left: 0;
-          height: 0;
-          background-color: rgba(255, 255, 255, 0.15);
-          content: '';
-          z-index: -1;
-        }
-        &:hover {
-          &:before {
-            left: 0;
-            width: 100%;
-          }
-          &:after {
-            height: 100%;
-          }
-        }
-
-        // &:after {
-        //   position: absolute;
-        //   top: 50%;
-        //   right: 0;
-        //   background-color: #fff;
-        //   width: 1px;
-        //   height: 20px;
-        //   margin-top: -9px;
-        //   opacity: 0.2;
-        //   content: '';
-        // }
+      .img {
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
       }
     }
-  }
-}
-
-.quick_menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  li {
-    float: left;
-
-    padding: 10px;
-    img {
-      width: 30px;
-      height: 30px;
-      filter: invert(1);
+    .lnk {
+      display: block;
+      padding: 10px;
+      transition: 0.3s background-color ease-in-out;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
     }
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-  }
-}
-
-.logow {
-  position: absolute;
-  top: 35px;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  .logo_image {
-    float: left;
-  }
-
-  .logo {
-    margin-top: 8px;
-    font-family: 'Raleway';
-    font-size: 30px;
-    color: #fff;
-    font-weight: 400;
-    opacity: 0.9;
-    // text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  .slogan {
-    font-family: 'Raleway';
-    font-size: 13px;
-    color: #fff;
-    font-weight: 700;
-    opacity: 0.7;
-    margin-left: 5px;
   }
 }

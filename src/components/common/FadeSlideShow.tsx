@@ -37,32 +37,32 @@ const slides: Slide[] = [
 
 const FadeSlideshow = () => {
   const [index, setIndex] = React.useState(0);
-  const [mounted, setMounted] = React.useState(false);
+  const [started, setStarted] = React.useState(false);
 
   React.useEffect(() => {
-    // 첫 렌더 이후 한 번만 true로 세팅 → 이때 처음 슬라이드가 fade-in
-    setMounted(true);
-  }, []);
+    setStarted(true);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
+    const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 10000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(id);
   }, []);
 
   return (
     <React.Fragment>
       <section className="visual_wrapper" aria-labelledby="visual-heading">
         {slides.map((slide, i) => {
-          const isActive = mounted && index === i;
+          const isActive = started && index === i;
           return (
-            <div aria-hidden="true" key={i} className={`visual_slide ${isActive ? 'active' : ''}`}>
-              <div
-                className={`visual_img ${isActive ? 'zoom' : ''}`}
-                style={{ backgroundImage: `url(${slide.image})` }}
-              ></div>
+            <div
+              key={slide.image}
+              aria-hidden="true"
+              className={`visual_slide ${isActive ? 'active' : ''}`}
+            >
+              <div className={`visual_img ${isActive ? 'zoom' : ''}`}>
+                <Image src={slide.image} alt={''} width={1920} height={1200} className={'img'} />
+              </div>
               <div className="copy-wrapper">
                 <p className={`copy-tag ${isActive ? 'active' : ''}`}>{slide.tag}</p>
                 <h2 className={`copy-title ${isActive ? 'active' : ''}`}>{slide.title}</h2>
