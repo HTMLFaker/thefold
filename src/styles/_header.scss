@@ -16,6 +16,9 @@
   }
   &.is_scroll_up {
     top: 0px;
+    .header_brand {
+      scale: 0.8;
+    }
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.5);
@@ -38,6 +41,7 @@
     font-family: 'Raleway', 'Pretendard', sans-serif;
     background: url('/logo.png') no-repeat 0 0 / 80px 80px;
     padding: 10px 10px 10px 80px;
+    transition: 0.2s all ease-in-out;
     .title {
       color: #fff;
       font-weight: 400;
@@ -62,10 +66,18 @@
       }
     }
     .itm {
+      position: relative;
       float: left;
       // &:first-child {
       //   margin-left: 0;
       // }
+      &:hover {
+        .sub_lst {
+          height: auto;
+          opacity: 1;
+          width: 200px;
+        }
+      }
     }
     .lnk {
       display: block;
@@ -102,6 +114,58 @@
         }
         &:after {
           height: 100%;
+        }
+      }
+    }
+    .sub_lst {
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 40px;
+      left: 0;
+      overflow: hidden;
+      width: 0;
+      transition: 0.2s all ease-in-out;
+      padding: 20px 0;
+    }
+    .sub_itm {
+    }
+    .sub_lnk {
+      position: relative;
+      display: block;
+      font-size: 15px;
+      line-height: 30px;
+      color: #fff;
+      white-space: nowrap;
+      padding: 10px 0 10px 50px;
+      &:before {
+        position: absolute;
+        top: 19px;
+        left: 35px;
+        width: 1px;
+        height: 11px;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: 0.2s all ease-in-out;
+        content: '';
+      }
+      &:after {
+        position: absolute;
+        top: 24px;
+        left: 30px;
+        width: 11px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: 0.2s all ease-in-out;
+        content: '';
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        &:before {
+          transform: rotate(360deg);
+        }
+        &:after {
+          transform: rotate(360deg);
         }
       }
     }

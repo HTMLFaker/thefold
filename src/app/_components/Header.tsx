@@ -15,26 +15,136 @@ export default function Header() {
               <Link href="/about" className="lnk">
                 회사소개
               </Link>
+              <ul className="sub_lst">
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    회사소개
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    인사말
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    오시는 길
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    대리점 모집
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="itm">
               <Link href="/greeting" className="lnk">
                 제품소개
               </Link>
+              <ul className="sub_lst">
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    회사소개
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    인사말
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    오시는 길
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    대리점 모집
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="itm">
               <Link href="#" className="lnk">
                 시공사례
               </Link>
+              <ul className="sub_lst">
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    회사소개
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    인사말
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    오시는 길
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    대리점 모집
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="itm">
               <Link href="#" className="lnk">
                 자료실
               </Link>
+              <ul className="sub_lst">
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    회사소개
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    인사말
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    오시는 길
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    대리점 모집
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="itm">
               <Link href="#" className="lnk">
                 견적문의
               </Link>
+              <ul className="sub_lst">
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    회사소개
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    인사말
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    오시는 길
+                  </Link>
+                </li>
+                <li className="sub_itm">
+                  <Link href="#" className="sub_lnk">
+                    대리점 모집
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
