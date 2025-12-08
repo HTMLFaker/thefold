@@ -40,13 +40,18 @@ const FadeSlideshow = () => {
   const [started, setStarted] = React.useState(false);
 
   React.useEffect(() => {
-    setStarted(true);
+    const startTimer = setTimeout(() => {
+      setStarted(true);
+    }, 100);
 
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 10000);
 
-    return () => clearInterval(id);
+    return () => {
+      clearTimeout(startTimer);
+      clearInterval(id);
+    };
   }, []);
 
   return (
@@ -61,7 +66,15 @@ const FadeSlideshow = () => {
               className={`visual_slide ${isActive ? 'active' : ''}`}
             >
               <div className={`visual_img ${isActive ? 'zoom' : ''}`}>
-                <Image src={slide.image} alt={''} width={1920} height={1200} className={'img'} />
+                <Image
+                  src={slide.image}
+                  alt={''}
+                  width={1920}
+                  height={1200}
+                  className={'img'}
+                  priority={i === 0}
+                  sizes="100vw"
+                />
               </div>
               <div className="copy-wrapper">
                 <p className={`copy-tag ${isActive ? 'active' : ''}`}>{slide.tag}</p>
