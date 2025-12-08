@@ -45,8 +45,8 @@ async function clearOutputDir() {
 // 이미지 압축 + OUTPUT_DIR 로 저장 (리사이즈 없음)
 async function compressAndWrite(inputPath, outputPath, ext) {
   let image = sharp(inputPath).resize({
-    width: 2560,
-    height: 2560,
+    width: 1920,
+    height: 1920,
     fit: 'inside', // 긴 변을 1920 안으로 맞춤
     withoutEnlargement: true, // 원본이 더 작으면 확대 X
   });
