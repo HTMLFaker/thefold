@@ -246,9 +246,9 @@
       top: -80px;
     }
     &.is_scroll_up {
-      top: 0px;
+      top: 30px;
       .header_brand {
-        scale: 0.8;
+        scale: 1;
       }
 
       &:hover {
