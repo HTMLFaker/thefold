@@ -64,15 +64,29 @@
     appearance: none;
     background: none;
     border: 0;
-    padding: 20px;
     cursor: pointer;
     .sp_menu {
       display: block;
       overflow: hidden;
-      width: 40px;
-      height: 40px;
-      background: url('/menu.png') no-repeat 0 0 / 100% 100%;
-      filter: invert(1);
+      position: relative;
+      width: 30px;
+      height: 24px;
+
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        top: 10px;
+
+        content: '';
+      }
+
+      // filter: invert(1);
     }
   }
 
@@ -223,14 +237,48 @@
 
 @media (max-width: 1024px) {
   .header {
+    top: 30px;
     padding: 0;
+    &.is_top {
+      top: 30px !important;
+    }
+    &.is_scroll_down {
+      top: -80px;
+    }
+    &.is_scroll_up {
+      top: 0px;
+      .header_brand {
+        scale: 0.8;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .header_inner {
+        top: 0;
+      }
+    }
+
     .header_inner {
+      padding: 0 25px;
     }
     .btn_header_toggle {
       display: block;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      padding: 5px;
     }
     .header_brand {
-      scale: 0.8;
+      padding: 5px 5px 5px 60px;
+      background-size: 60px 60px;
+      .title {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .slogan {
+        font-size: 12px;
+      }
     }
     .main_menu {
       display: none;
