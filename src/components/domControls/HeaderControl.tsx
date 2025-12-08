@@ -5,9 +5,18 @@ export default function HeaderControl() {
   const lastScroll = useRef(0);
 
   useEffect(() => {
+    const hd = document.querySelector('#headerController');
+    const headerMenuBtn = document.querySelector('#headerMenuButton');
+
+    console.log(headerMenuBtn);
+    headerMenuBtn?.addEventListener('click', () => {
+      console.log('gkajsdflkasjdflasdf');
+      hd?.classList.toggle('is_open');
+    });
+
     const handleScroll = () => {
       const current = window.scrollY;
-      const hd = document.querySelector('#headerController');
+
       if (!hd) return;
 
       if (current <= 0) {
