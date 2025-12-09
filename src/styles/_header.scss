@@ -1,18 +1,12 @@
+@use 'variables' as *;
+
 /* 공통 */
 .header {
   z-index: 100;
   position: fixed;
   right: 0;
   left: 0;
-  transition: 0.15s all ease-in-out;
-  &.is_scroll_down {
-  }
-  &.is_scroll_up {
-  }
-  .btn_header_toggle {
-  }
-  .header_inner {
-  }
+  transition: $transition-fast;
   .header_brand {
     display: block;
     font-family: 'Raleway', 'Pretendard', sans-serif;
@@ -33,24 +27,7 @@
       line-height: 20px;
     }
   }
-  .menu_wrapper {
-  }
-  .main_menu {
-    .lst {
-    }
-    .itm {
-    }
-    .lnk {
-    }
-    .sub_lst {
-    }
-    .sub_itm {
-    }
-    .sub_lnk {
-    }
-  }
   .quick_menu {
-    margin-left: auto;
     padding: 15px 0;
     .lst {
       &:after {
@@ -70,7 +47,7 @@
     .lnk {
       display: block;
       padding: 13px;
-      transition: 0.15s background-color ease-in-out;
+      transition: $transition-fast;
       border-radius: 5px;
     }
   }
@@ -97,19 +74,13 @@
       max-width: 1500px;
       margin: 0 auto;
     }
-    .header_brand {
-      .title {
-      }
-      .slogan {
-      }
-    }
     .menu_wrapper {
       display: flex;
       flex: 1;
     }
     .main_menu {
       padding: 20px 0 20px 100px;
-      transition: 0.15s all ease-in-out;
+      transition: $transition-fast;
       .lst {
         &:after {
           display: block;
@@ -120,9 +91,6 @@
       .itm {
         position: relative;
         float: left;
-        // &:first-child {
-        //   margin-left: 0;
-        // }
         &.is-open,
         &:hover {
           .sub_lst {
@@ -143,7 +111,7 @@
         &:before,
         &:after {
           position: absolute;
-          transition: 0.3s all ease-out;
+          transition: $transition-fast;
           background-color: rgba(255, 255, 255, 0.15);
           content: '';
         }
@@ -178,10 +146,8 @@
         left: 0;
         overflow: hidden;
         width: 0;
-        transition: 0.2s all ease-in-out;
+        transition: $transition-fast;
         padding: 21px 0;
-      }
-      .sub_itm {
       }
       .sub_lnk {
         position: relative;
@@ -191,12 +157,12 @@
         color: #fff;
         white-space: nowrap;
         padding: 10px 0 10px 50px;
-        transition: 0.15s all ease-in-out;
+        transition: $transition-fast;
         &:before,
         &:after {
           position: absolute;
-          background-color: rgba(255, 255, 255, 0.5);
-          transition: 0.5s all ease-in-out;
+          background-color: #999;
+          transition: $transition-fast;
           content: '';
         }
         &:before {
@@ -212,7 +178,7 @@
           height: 1px;
         }
         &:hover {
-          background-color: rgba(174, 146, 56, 0.3);
+          background-color: rgba(172, 130, 40, 0.3);
           &:before {
             transform: rotate(360deg);
           }
@@ -223,10 +189,7 @@
       }
     }
     .quick_menu {
-      .lst {
-      }
-      .itm {
-      }
+      margin-left: auto;
       .lnk {
         &:hover {
           background-color: rgba(255, 255, 255, 0.15);
@@ -273,11 +236,9 @@
           background-color: #fff;
           top: 10px;
           content: '';
-          transition: 0.15s all ease-in-out;
+          transition: $transition-fast;
         }
       }
-    }
-    .header_inner {
     }
     .header_brand {
       background-size: 70px;
@@ -299,7 +260,7 @@
       bottom: 0;
       width: 0;
       background-color: rgba(0, 0, 0, 0.9);
-      transition: 0.15s all ease-in-out;
+      transition: $transition-fast;
       &:before {
         z-index: -1;
         overflow: hidden;
@@ -310,7 +271,7 @@
         height: 0;
         background-color: rgba(0, 0, 0, 0.5);
         transform: translateX(-50%) translateY(-50%);
-        transition: 0.15s all ease-in-out;
+        transition: $transition-fast;
         content: '';
         opacity: 0;
       }
@@ -320,8 +281,6 @@
       top: 100px;
       left: 0;
       width: 100%;
-      .lst {
-      }
       .itm {
         &.is-open {
           .lnk {
@@ -349,7 +308,7 @@
         &:before,
         &:after {
           position: absolute;
-          background-color: rgba(255, 255, 255, 0.3);
+          background-color: #555;
           content: '';
         }
         &:before {
@@ -369,8 +328,6 @@
         display: none;
         padding: 0 20px;
       }
-      .sub_itm {
-      }
       .sub_lnk {
         display: block;
         padding: 10px 70px;
@@ -383,12 +340,6 @@
       position: absolute;
       top: 5px;
       left: 7px;
-      .lst {
-      }
-      .itm {
-      }
-      .lnk {
-      }
     }
     &.is_open {
       .btn_header_toggle {
@@ -412,8 +363,6 @@
           opacity: 1;
         }
       }
-      .quick_menu {
-      }
       &.is_scroll_up,
       &.is_scroll_down {
         .btn_header_toggle {
@@ -432,8 +381,6 @@
   .header {
     .main_menu {
       padding-left: 30px;
-      .lnk {
-      }
     }
   }
 }

@@ -11,8 +11,8 @@ function collectTotals() {
     | PerformanceNavigationTiming
     | undefined;
 
-  if (nav && typeof (nav as any).transferSize === 'number') {
-    const bytes = (nav as any).transferSize as number;
+  if (nav && typeof nav.transferSize === 'number') {
+    const bytes = nav.transferSize as number;
     total += bytes;
     byType.set('document', { bytes, count: 1 });
   }
@@ -30,7 +30,7 @@ function collectTotals() {
 
     if (url.origin !== currentOrigin) continue;
 
-    const bytes = (entry as any).transferSize as number | undefined;
+    const bytes = entry.transferSize as number | undefined;
     if (!bytes || bytes <= 0) continue;
 
     total += bytes;

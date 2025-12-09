@@ -1,4 +1,3 @@
-import { VisualLoader } from '@/components/common/VisualLoader';
 import Header from '../_components/Header';
 
 export const metadata = {
@@ -9,7 +8,6 @@ export const metadata = {
 export default function CompanyPage() {
   return (
     <div className="wrapper sub">
-      <VisualLoader />
       <Header />
       <main className="main"></main>
       <footer>

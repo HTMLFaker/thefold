@@ -35,7 +35,7 @@ const slides: Slide[] = [
   },
 ];
 
-const FadeSlideshow = () => {
+const VisualFader = () => {
   const [index, setIndex] = React.useState(0);
   const [started, setStarted] = React.useState(false);
 
@@ -92,4 +92,4 @@ const FadeSlideshow = () => {
   );
 };
 
-export default FadeSlideshow;
+export default VisualFader;

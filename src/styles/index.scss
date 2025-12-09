@@ -1,6 +1,5 @@
-@use 'webfont' as *;
-@use 'variables' as *;
-@use 'mixins' as *;
+@use 'webfont';
+@use 'variables';
 @use 'reset';
 
 @use 'common';
@@ -18,28 +17,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #d9b077;
-
-  // &.loading {
-  //   .wrapper {
-  //     opacity: 0;
-  //   }
-  // }
-  // &.is-loaded {
-  //   .wrapper {
-  //     opacity: 1;
-  //   }
-  // }
 }
 
 .wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  &.main {
-  }
-  &.sub {
-    background-color: #d59a5f;
-  }
 }
 
 main {
