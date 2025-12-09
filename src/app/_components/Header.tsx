@@ -6,7 +6,7 @@ import React from 'react';
 export default function Header() {
   return (
     <React.Fragment>
-      <header className="header is_top" id="headerController">
+      <header className="header" id="headerController">
         <button
           aria-hidden="true"
           type="button"

@@ -17,7 +17,6 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <div className="wrapper main">
-        <VisualLoader />
         <Header />
 
         <main className="main">

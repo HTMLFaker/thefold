@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export const NAV_ITEMS = [
@@ -57,26 +56,14 @@ export const NAV_ITEMS = [
 
 const Navigation = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const handleOpen = (index: number) => setOpenIndex(index);
 
-  const handleItemBlur = (e: React.FocusEvent<HTMLLIElement>) => {
-    const currentItem = e.currentTarget;
-    const next = e.relatedTarget as HTMLElement | null;
-    if (next && currentItem.contains(next)) return;
-    setOpenIndex(null);
-  };
-
   return (
-    <div className="menu_wrapper">
-      <nav className="main_menu" aria-label="주요 메뉴" onMouseLeave={() => setOpenIndex(null)}>
+    <div className="menu_wrapper" onMouseLeave={() => setOpenIndex(null)}>
+      <nav className="main_menu" aria-label="주요 메뉴">
         <ul className="lst">
           {NAV_ITEMS.map((menu, index) => (
-            <li
-              key={menu.path}
-              className={`itm${openIndex === index ? ' is-open' : ''}`}
-              onBlurCapture={handleItemBlur}
-            >
+            <li key={menu.path} className={`itm${openIndex === index ? ' is-open' : ''}`}>
               <button
                 type="button"
                 className="lnk"

@@ -19,16 +19,16 @@ body {
   flex-direction: column;
   background-color: #d9b077;
 
-  &.loading {
-    .wrapper {
-      opacity: 0;
-    }
-  }
-  &.is-loaded {
-    .wrapper {
-      opacity: 1;
-    }
-  }
+  // &.loading {
+  //   .wrapper {
+  //     opacity: 0;
+  //   }
+  // }
+  // &.is-loaded {
+  //   .wrapper {
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 .wrapper {

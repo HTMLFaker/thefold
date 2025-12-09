@@ -68,7 +68,7 @@ export default function RootLayout({
     <html lang="ko">
       <VisitTracker />
       <ResourceReporter />
-      <body className="loading">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
