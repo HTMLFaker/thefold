@@ -69,8 +69,6 @@ export default function RootLayout({
       <VisitTracker />
       <ResourceReporter />
       <body className="loading">{children}</body>
-
-      <HeaderControl />
     </html>
   );
 }

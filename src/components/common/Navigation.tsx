@@ -105,22 +105,22 @@ const Navigation = () => {
         <ul className="lst">
           <li className="itm">
             <Link href="#" className="lnk" aria-label="고객문의">
-              <Image src="/question.png" alt="" width={24} height={24} className="img" />
+              <span className="sp sp_question" />
             </Link>
           </li>
           <li className="itm">
             <Link href="#" className="lnk" aria-label="전화문의">
-              <Image src="/telephone.png" alt="" width={24} height={24} className="img" />
+              <span className="sp sp_telephone" />
             </Link>
           </li>
           <li className="itm">
             <Link href="#" className="lnk" aria-label="오시는길">
-              <Image src="/placeholder.png" alt="" width={24} height={24} className="img" />
+              <span className="sp sp_placeholder" />
             </Link>
           </li>
           <li className="itm">
             <Link href="#" className="lnk" aria-label="관리자">
-              <Image src="/user.png" alt="" width={24} height={24} className="img" />
+              <span className="sp sp_user" />
             </Link>
           </li>
         </ul>

@@ -6,6 +6,7 @@ import Header from './_components/Header';
 import { VisualLoader } from '@/components/common/VisualLoader';
 import React from 'react';
 import Video from '@/components/main/Video';
+import Footer from './_components/Footer';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -15,7 +16,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <React.Fragment>
-      <div className="wrapper">
+      <div className="wrapper main">
         <VisualLoader />
         <Header />
 
@@ -26,32 +27,7 @@ export default function HomePage() {
           <UploadImageClient />
         </main>
 
-        <footer>
-          asdf
-          <br />
-          askldfjsaljdfjksdasdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-          asdf
-          <br />
-        </footer>
+        <Footer />
       </div>
     </React.Fragment>
   );
