@@ -5,6 +5,8 @@ import React from 'react';
 import Video from '@/components/main/Video';
 import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
+import GlassFader from '@/components/main/GlassFader';
+import Image from 'next/image';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -12,6 +14,14 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const items = [
+    <button key="a" onClick={() => console.log('첫 번째 클릭')}>
+      A
+    </button>,
+    <div key="b">B</div>,
+    <div key="c">C</div>,
+  ];
+
   return (
     <React.Fragment>
       <div className="wrapper main">
@@ -19,6 +29,31 @@ export default function HomePage() {
 
         <main className="main">
           <VisualFader />
+          <div className="glass_visual_wrap">
+            <div className="glass_animation">
+              <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
+              <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img img2'} />
+              <Image src={'/a2.jpg'} alt={''} width={1350} height={759} className={'img img3'} />
+              <Image src={'/a3.jpg'} alt={''} width={1350} height={759} className={'img img4'} />
+              <Image src={'/a4.jpg'} alt={''} width={1350} height={759} className={'img img5'} />
+            </div>
+            <div className="text_area">
+              <h2 className="title">
+                <span className="hash">#</span> 글라스 폴딩도어
+              </h2>
+              <p className="description">국내 최소 유리간격 2mm 적용</p>
+            </div>
+          </div>
+
+          {/* <div>
+            <GlassFader intervalMs={[2000, 5000, 3000, 10000]}>
+              <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img'} />
+              <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img'} />
+              <Image src={'/a2.jpg'} alt={''} width={1350} height={759} className={'img'} />
+              <Image src={'/a3.jpg'} alt={''} width={1350} height={759} className={'img'} />
+              <Image src={'/a4.jpg'} alt={''} width={1350} height={759} className={'img'} />
+            </GlassFader>
+          </div> */}
           <Video />
           <HomeClient />
           <UploadImageClient />
