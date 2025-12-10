@@ -156,29 +156,20 @@
       }
 
       .title {
-        width: 100%;
-        flex: 1;
-        color: #fff;
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 30px;
+        line-height: 30px;
         .hash {
-          display: block;
-          margin-bottom: 20px;
-          font-size: 100px;
-          color: #f90;
-          line-height: 72px;
-          font-family: 'Raleway', sans-serif;
+          margin-bottom: 10px;
+          font-size: 50px;
+          line-height: 42px;
         }
       }
       .description {
         margin-top: 10px;
-        color: #ccc;
-        font-size: 28px;
-        line-height: 40px;
-        flex: 1;
-        font-family: 'Noto Serif KR', sans-serif;
+        font-size: 18px;
+        line-height: 25px;
         span {
-          display: block;
+          display: inline;
         }
       }
     }
