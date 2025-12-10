@@ -45,6 +45,40 @@ export default function HomePage() {
             </div>
           </div>
 
+          <div className="partition_visual_wrap">
+            <div className="partition_animation">
+              <Image src={'/b1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
+              <Image src={'/b2.jpg'} alt={''} width={1350} height={759} className={'img img2'} />
+              <Image src={'/b3.jpg'} alt={''} width={1350} height={759} className={'img img3'} />
+            </div>
+            <div className="text_area">
+              <h2 className="title">
+                <span className="hash">#</span> 칸막이 폴딩도어
+              </h2>
+              <p className="description">
+                인테리어 시트 마감으로
+                <br /> 다양한 디자인
+              </p>
+            </div>
+          </div>
+
+          <div className="the_visual_wrap">
+            <div className="the_animation">
+              <Image src={'/c1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
+              <Image src={'/c2.jpg'} alt={''} width={1350} height={759} className={'img img2'} />
+              <Image src={'/c1-1.png'} alt={''} width={1350} height={759} className={'img img3'} />
+            </div>
+            <div className="text_area">
+              <h2 className="title">
+                <span className="hash">#</span> the 폴딩도어
+              </h2>
+              <p className="description">
+                다양한 유리성능 적용으로
+                <br /> 실용성 극대화
+              </p>
+            </div>
+          </div>
+
           {/* <div>
             <GlassFader intervalMs={[2000, 5000, 3000, 10000]}>
               <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img'} />
@@ -54,7 +88,6 @@ export default function HomePage() {
               <Image src={'/a4.jpg'} alt={''} width={1350} height={759} className={'img'} />
             </GlassFader>
           </div> */}
-          <Video />
           <HomeClient />
           <UploadImageClient />
         </main>
