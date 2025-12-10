@@ -2,10 +2,8 @@ import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
 import Header from './_components/Header';
 import React from 'react';
-import Video from '@/components/main/Video';
 import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
-import GlassFader from '@/components/main/GlassFader';
 import Image from 'next/image';
 
 export const metadata = {
