@@ -89,11 +89,11 @@
         }
         &.img4 {
           animation-name: segment_glass4;
-          transform: scale(1.1) translateX(-30px);
+          transform: scale(1.1) translateX(-3%);
         }
         &.img5 {
           animation-name: segment_glass5;
-          transform: scale(1.1) translateX(30px);
+          transform: scale(1.1) translateX(3%);
         }
       }
     }
@@ -108,15 +108,15 @@
       .img {
         &.img1 {
           animation-name: segment_partition1;
-          transform: scale(1.1) translateX(30px);
+          transform: scale(1.1) translateX(3%);
         }
         &.img2 {
           animation-name: segment_partition2;
-          transform: scale(1.1) translateX(-30px);
+          transform: scale(1.1) translateX(-3%);
         }
         &.img3 {
           animation-name: segment_partition3;
-          transform: scale(1.1) translateX(30px);
+          transform: scale(1.1) translateX(3%);
         }
       }
     }
@@ -127,15 +127,15 @@
       .img {
         &.img1 {
           animation-name: segment_the1;
-          transform: scale(1.1) translateX(30px);
+          transform: scale(1.1) translateX(3%);
         }
         &.img2 {
           animation-name: segment_the2;
-          transform: scale(1.1) translateX(-30px);
+          transform: scale(1.1) translateX(-3%);
         }
         &.img3 {
           animation-name: segment_the1_1;
-          transform: translateX(30px);
+          transform: translateX(3%);
         }
       }
     }
@@ -161,7 +161,7 @@
       float: none !important;
       margin: 0 !important;
       width: 100%;
-      padding-bottom: 55%;
+      padding-bottom: 53%;
     }
     .text_area {
       margin-top: 20px;
@@ -246,15 +246,15 @@
 }
 @keyframes segment_glass4 {
   0% {
-    transform: scale(1.1) translateX(-30px);
+    transform: scale(1.1) translateX(-3%);
   }
-  45% {
+  43% {
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
-  65% {
+  63% {
     opacity: 1;
   }
   70% {
@@ -266,18 +266,18 @@
 }
 @keyframes segment_glass5 {
   0% {
-    transform: scale(1.1) translateX(30px);
+    transform: scale(1.1) translateX(3%);
   }
-  65% {
+  63% {
     opacity: 0;
   }
   70% {
     opacity: 1;
   }
-  75% {
+  73% {
     opacity: 1;
   }
-  95% {
+  93% {
     opacity: 1;
   }
   100% {
@@ -292,13 +292,13 @@
   30% {
     opacity: 1;
   }
-  35% {
+  33% {
     opacity: 0;
   }
   40% {
     transform: scale(1) translateX(0);
   }
-  95% {
+  93% {
     opacity: 0;
   }
   100% {
@@ -307,7 +307,7 @@
 }
 @keyframes segment_partition2 {
   0% {
-    transform: scale(1.1) translateX(-30px);
+    transform: scale(1.1) translateX(-3%);
   }
   10% {
   }
@@ -315,20 +315,20 @@
   }
   30% {
     opacity: 0;
-    transform: scale(1.1) translateX(-30px);
+    transform: scale(1.1) translateX(-3%);
   }
-  35% {
+  33% {
     opacity: 1;
   }
-  65% {
+  63% {
     opacity: 1;
   }
   70% {
     opacity: 0;
     transform: scale(1) translateX(0);
   }
-  75% {
-    transform: scale(1.1) translateX(-30px);
+  73% {
+    transform: scale(1.1) translateX(-3%);
   }
 }
 @keyframes segment_partition3 {
@@ -337,12 +337,12 @@
   }
   60% {
     opacity: 0;
-    transform: scale(1.1) translateX(30px);
+    transform: scale(1.1) translateX(3%);
   }
-  65% {
+  63% {
     opacity: 1;
   }
-  95% {
+  93% {
     opacity: 1;
   }
   100% {
@@ -357,14 +357,14 @@
   50% {
     opacity: 1;
   }
-  55% {
+  53% {
     opacity: 0;
     transform: scale(1) translateX(0);
   }
   60% {
-    transform: scale(1.1) translateX(30px);
+    transform: scale(1.1) translateX(3%);
   }
-  95% {
+  93% {
     opacity: 0;
   }
   100% {
@@ -378,14 +378,14 @@
   50% {
     opacity: 1;
   }
-  55% {
+  53% {
     opacity: 0;
     transform: translateX(0);
   }
   60% {
-    transform: translateX(30px);
+    transform: translateX(3%);
   }
-  95% {
+  93% {
     opacity: 0;
   }
   100% {
@@ -395,12 +395,12 @@
 @keyframes segment_the2 {
   50% {
     opacity: 0;
-    transform: scale(1.1) translateX(-30px);
+    transform: scale(1.1) translateX(-3%);
   }
-  55% {
+  53% {
     opacity: 1;
   }
-  95% {
+  93% {
     opacity: 1;
   }
   100% {
