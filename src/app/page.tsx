@@ -5,6 +5,7 @@ import React from 'react';
 import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
 import Image from 'next/image';
+import MovieControl from '@/components/domControls/MovieControl';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -12,14 +13,6 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  const items = [
-    <button key="a" onClick={() => console.log('첫 번째 클릭')}>
-      A
-    </button>,
-    <div key="b">B</div>,
-    <div key="c">C</div>,
-  ];
-
   return (
     <React.Fragment>
       <div className="wrapper main">
@@ -48,7 +41,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
             <div className="card_movie partition">
               <div className="movie_area">
                 <Image src={'/b1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
@@ -66,7 +58,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
             <div className="card_movie the">
               <div className="movie_area">
                 <Image src={'/c1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
@@ -90,6 +81,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            <MovieControl />
 
             <HomeClient />
             <UploadImageClient />

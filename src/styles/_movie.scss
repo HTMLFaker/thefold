@@ -4,6 +4,7 @@
   background-color: #001317;
   height: 440px;
   margin-top: 50px;
+  transition: 0.3s all ease-in-out;
   .movie_area {
     float: left;
     overflow: hidden;
@@ -71,6 +72,7 @@
     }
   }
   &.glass {
+    transform: translateX(-100px);
     .movie_area {
       .img {
         &.img1 {
@@ -97,6 +99,7 @@
     }
   }
   &.partition {
+    transform: translateX(100px);
     background-color: #73572f;
     .movie_area {
       float: right;
@@ -119,6 +122,7 @@
     }
   }
   &.the {
+    transform: translateX(-100px);
     .movie_area {
       .img {
         &.img1 {
@@ -134,6 +138,17 @@
           transform: translateX(30px);
         }
       }
+    }
+  }
+  &.is_passed {
+    &.glass {
+      transform: translateX(0);
+    }
+    &.partition {
+      transform: translateX(0);
+    }
+    &.the {
+      transform: translateX(0);
     }
   }
 }
