@@ -1,14 +1,6 @@
 .visual_wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 2560px;
-  height: 1000px;
+  background-color: #73572f;
 
-  //   border-bottom-left-radius: 50px;
-  //   border-bottom-right-radius: 50px;
-  //   filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.3));
   &:before {
     position: absolute;
     top: 0;
@@ -19,18 +11,19 @@
 
     z-index: 1;
     content: '';
+    transition: 0.15s all ease-in-out;
+    opacity: 1;
   }
-  //   &:after {
-  //     position: absolute;
-  //     top: 20px;
-  //     right: 20px;
-  //     bottom: 20px;
-  //     left: 20px;
-  //     border: 1px dashed rgba(255, 255, 255, 0.3);
-  //     z-index: 2;
+}
 
-  //     content: '';
-  //   }
+.visual_inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 2560px;
+  height: 1000px;
+
   .visual_slide {
     position: absolute;
     inset: 0;
@@ -46,7 +39,7 @@
     width: 100%;
     height: 100%;
     &.zoom {
-      animation: visualZoomIn 10s ease-out;
+      animation: visual_img_zoom 10s ease-out;
     }
     .img {
       width: 100%;
@@ -57,7 +50,7 @@
   }
 }
 
-@keyframes visualZoomIn {
+@keyframes visual_img_zoom {
   0% {
     transform: scale(1.1);
   }
@@ -66,110 +59,84 @@
   }
 }
 
-.copy-wrapper {
+.copy_wrapper {
   position: absolute;
   bottom: 100px;
   left: 50%;
   width: 100%;
-  max-width: 1200px;
-
+  max-width: 1280px;
   transform: translateX(-50%);
-
-  //   pointer-events: none;
-}
-
-.copy-tag,
-.copy-title,
-.copy-desc {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.6s ease-in-out,
-    transform 0.6s ease-in-out;
-}
-
-.copy-tag {
-  clear: both;
-  float: left;
-  padding-bottom: 2px;
-
-  color: rgb(116, 74, 10);
-  font-family: 'Noto Serif KR';
-  font-size: 22px;
-  line-height: 22px;
-  font-weight: 700;
-
-  transition-delay: 3s;
-
-  background-color: #fff;
-  padding: 5px;
-}
-
-.copy-title {
-  clear: both;
-  float: left;
-  margin-top: 20px;
-
-  color: #fff;
-  font-family: 'pretendard';
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 700;
-
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  //   background-color: rgba(0, 0, 0, 0.5);
-  transition-delay: 1s;
-}
-
-.copy-desc {
-  clear: both;
-  float: left;
-  margin-top: 10px;
-
-  color: #fff;
-  font-family: 'Noto Serif KR';
-  font-size: 25px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  transition-delay: 2s;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-
-  //   background-color: rgb(37, 79, 37);
-
-  span {
-    display: block;
+  .copy_inner {
+    padding: 0 20px;
   }
-}
+  .copy_tag,
+  .copy_title,
+  .copy_description {
+    clear: both;
+    float: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.6s ease-in-out,
+      transform 0.6s ease-in-out;
 
-/* active 시에만 보여짐 */
-.copy-tag.active,
-.copy-title.active,
-.copy-desc.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .copy_tag {
+    color: rgb(116, 74, 10);
+    font-family: 'Noto Serif KR';
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    transition-delay: 3s;
+    background-color: #fff;
+    padding: 5px;
+  }
+  .copy_title {
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'pretendard';
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition-delay: 1s;
+  }
+  .copy_description {
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Noto Serif KR';
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+    transition-delay: 2s;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 
-.copy-tag.active {
-  transform: translateY(0);
+    span {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   .visual_wrapper {
-    height: 600px;
-    .copy-wrapper {
+    .visual_inner {
+      height: 600px;
+    }
+
+    .copy_wrapper {
       bottom: 30px;
-      .copy-tag {
-        margin-left: 30px;
+      .copy_tag {
         font-size: 14px;
       }
-      .copy-title {
-        margin-left: 30px;
+      .copy_title {
         margin-top: 5px;
         font-size: 30px;
       }
-      .copy-desc {
-        margin-left: 30px;
+      .copy_description {
         margin-top: 0;
         font-size: 16px;
       }

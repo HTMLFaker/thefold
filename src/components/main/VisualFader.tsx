@@ -56,7 +56,7 @@ const VisualFader = () => {
 
   return (
     <React.Fragment>
-      <section className="visual_wrapper" aria-labelledby="visual-heading">
+      <div className="visual_inner" aria-labelledby="visual-heading">
         {slides.map((slide, i) => {
           const isActive = started && index === i;
           return (
@@ -76,18 +76,21 @@ const VisualFader = () => {
                   sizes="100vw"
                 />
               </div>
-              <div className="copy-wrapper">
-                <p className={`copy-tag ${isActive ? 'active' : ''}`}>{slide.tag}</p>
-                <h2 className={`copy-title ${isActive ? 'active' : ''}`}>{slide.title}</h2>
-                <p className={`copy-desc ${isActive ? 'active' : ''}`}>
-                  <span>{slide.description1}</span>
-                  <span>{slide.description2}</span>
-                </p>
+              <div className="copy_wrapper">
+                <div className="copy_inner">
+                  <p className={`copy_tag ${isActive ? 'active' : ''}`}>{slide.tag}</p>
+                  <h2 className={`copy_title ${isActive ? 'active' : ''}`}>{slide.title}</h2>
+                  <p className={`copy_description ${isActive ? 'active' : ''}`}>
+                    <span>{slide.description1}</span>
+                    <span>{slide.description2}</span>
+                  </p>
+                </div>
               </div>
             </div>
           );
         })}
-      </section>
+        <div className="visual_gradiant" />
+      </div>
     </React.Fragment>
   );
 };

@@ -28,61 +28,22 @@ body {
 
 main {
   flex: 1;
-}
-
-.visual_video {
-  overflow: hidden;
-  // padding: 150px 0;
-  // background-color: rgb(134, 107, 18);
-  // text-align: center;
-  width: 880px;
-  border: 15px solid #001317;
-  margin: 100px auto;
-  padding-left: 400px;
-  background-color: #001317;
-  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
-  // &:before {
-  //   position: absolute;
-  //   top: 1000px;
-  //   left: 0;
-  //   width: 0;
-  //   height: 0;
-  //   border-left: 2000px solid transparent;
-  //   border-right: 1000px solid transparent;
-  //   border-top: 115px solid rgba(0, 0, 0, 0.2);
-  //   content: '';
-  // }
-  // &:after {
-  //   position: absolute;
-  //   top: 1000px;
-  //   left: 0;
-  //   width: 0;
-  //   height: 0;
-  //   border-left: 1000px solid transparent;
-  //   border-right: 2000px solid transparent;
-  //   border-top: 115px solid rgba(0, 0, 0, 0.2);
-  //   content: '';
-  // }
-  h2 {
-    font-size: 70px;
-    color: rgba(255, 255, 255, 0.5);
-    // text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  p {
-    margin-top: 20px;
-    font-size: 35px;
-    color: rgba(255, 255, 255, 0.3);
-    padding-bottom: 150px;
-    // text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    // font-family: 'Noto Serif KR';
-    span {
-      color: #ff0;
-      font-size: 50px;
-      font-weight: 700;
+  &.main_wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    .main_inner {
+      padding: 50px 20px;
     }
   }
-  video {
-    display: block;
-    width: 100%;
+}
+
+@media (max-width: 1024px) {
+  main {
+    &.main_wrapper {
+      .main_inner {
+        padding: 0 20px;
+      }
+    }
   }
 }

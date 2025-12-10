@@ -1,79 +1,186 @@
-.glass_visual_wrap {
-  background-color: #001317;
-  margin: 0 auto;
-  width: 1280px;
-  padding: 20px;
+.card_movie {
   overflow: hidden;
-
+  padding: 20px;
+  background-color: #001317;
+  height: 440px;
+  margin-top: 50px;
+  .movie_area {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 100%;
+    margin-right: 20px;
+    .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center center;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
   .text_area {
     overflow: hidden;
     text-align: center;
-    margin-top: 80px;
-  }
-  .title {
-    width: 100%;
-    flex: 1;
-    color: #fff;
-    font-size: 50px;
-    line-height: 70px;
-    .hash {
-      display: block;
-      font-size: 100px;
-      color: #f90;
-      line-height: 100px;
-      font-family: 'Raleway';
+    white-space: nowrap;
+    height: 100%;
+
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+      background-color: #fff;
+      content: '';
+    }
+    .text_inner {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+    }
+    .title {
+      width: 100%;
+      flex: 1;
+      color: #fff;
+      font-size: 50px;
+      line-height: 50px;
+      .hash {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 100px;
+        color: #f90;
+        line-height: 72px;
+        font-family: 'Raleway', sans-serif;
+      }
+    }
+    .description {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 28px;
+      line-height: 40px;
+      flex: 1;
+      font-family: 'Noto Serif KR', sans-serif;
+      span {
+        display: block;
+      }
     }
   }
-  .description {
-    margin-top: 10px;
-    color: #ccc;
-    font-size: 28px;
-    line-height: 40px;
-    flex: 1;
-    font-family: 'Noto Serif KR';
-    background-color: rgb(73, 59, 37);
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px 10px;
+  &.glass {
+    .movie_area {
+      .img {
+        &.img1 {
+          animation-name: segment_glass1;
+          transform: scale(1.1);
+        }
+        &.img2 {
+          animation-name: segment_glass2;
+          transform: scale(1.1);
+        }
+        &.img3 {
+          animation-name: segment_glass3;
+          transform: scale(1.1);
+        }
+        &.img4 {
+          animation-name: segment_glass4;
+          transform: scale(1.1) translateX(-30px);
+        }
+        &.img5 {
+          animation-name: segment_glass5;
+          transform: scale(1.1) translateX(30px);
+        }
+      }
+    }
+  }
+  &.partition {
+    background-color: #73572f;
+    .movie_area {
+      float: right;
+      margin-right: 0;
+      margin-left: 20px;
+      .img {
+        &.img1 {
+          animation-name: segment_partition1;
+          transform: scale(1.1) translateX(30px);
+        }
+        &.img2 {
+          animation-name: segment_partition2;
+          transform: scale(1.1) translateX(-30px);
+        }
+        &.img3 {
+          animation-name: segment_partition3;
+          transform: scale(1.1) translateX(30px);
+        }
+      }
+    }
+  }
+  &.the {
+    .movie_area {
+      .img {
+        &.img1 {
+          animation-name: segment_the1;
+          transform: scale(1.1) translateX(30px);
+        }
+        &.img2 {
+          animation-name: segment_the2;
+          transform: scale(1.1) translateX(-30px);
+        }
+        &.img3 {
+          animation-name: segment_the1_1;
+          transform: translateX(30px);
+        }
+      }
+    }
   }
 }
 
-.glass_animation {
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 800px;
-  height: 440px;
-  .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center center;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    &.img1 {
-      animation-name: segment_glass1;
-      transform: scale(1.1);
+@media (max-width: 1024px) {
+  .card_movie {
+    margin-top: 20px;
+    height: auto;
+    .movie_area {
+      float: none !important;
+      margin: 0 !important;
+      width: 100%;
+      padding-bottom: 55%;
     }
-    &.img2 {
-      animation-name: segment_glass2;
-      transform: scale(1.1);
-    }
-    &.img3 {
-      animation-name: segment_glass3;
-      transform: scale(1.1);
-    }
-    &.img4 {
-      animation-name: segment_glass4;
-      transform: scale(1.1) translateX(-30px);
-    }
-    &.img5 {
-      animation-name: segment_glass5;
-      transform: scale(1.1) translateX(30px);
+    .text_area {
+      margin-top: 20px;
+      height: auto;
+      .text_inner {
+        display: block;
+      }
+
+      .title {
+        width: 100%;
+        flex: 1;
+        color: #fff;
+        font-size: 50px;
+        line-height: 50px;
+        .hash {
+          display: block;
+          margin-bottom: 20px;
+          font-size: 100px;
+          color: #f90;
+          line-height: 72px;
+          font-family: 'Raleway', sans-serif;
+        }
+      }
+      .description {
+        margin-top: 10px;
+        color: #ccc;
+        font-size: 28px;
+        line-height: 40px;
+        flex: 1;
+        font-family: 'Noto Serif KR', sans-serif;
+        span {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -92,7 +199,6 @@
     opacity: 1;
   }
 }
-
 @keyframes segment_glass2 {
   0% {
     opacity: 1;
@@ -112,7 +218,6 @@
     transform: scale(1.1);
   }
 }
-
 @keyframes segment_glass3 {
   0% {
     transform: scale(1);
@@ -133,7 +238,6 @@
     transform: scale(1.1);
   }
 }
-
 @keyframes segment_glass4 {
   0% {
     transform: scale(1.1) translateX(-30px);
@@ -154,7 +258,6 @@
     transform: scale(1) translateX(0);
   }
 }
-
 @keyframes segment_glass5 {
   0% {
     transform: scale(1.1) translateX(30px);
@@ -176,75 +279,6 @@
     transform: scale(1) translateX(0);
   }
 }
-
-.partition_visual_wrap {
-  background-color: #73572f;
-  margin: 50px auto;
-  width: 1280px;
-  padding: 20px;
-  overflow: hidden;
-
-  .text_area {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 80px;
-  }
-  .title {
-    width: 100%;
-    flex: 1;
-    color: #fff;
-    font-size: 50px;
-    line-height: 70px;
-    .hash {
-      display: block;
-      font-size: 100px;
-      color: #f90;
-      line-height: 100px;
-      font-family: 'Raleway';
-    }
-  }
-  .description {
-    margin-top: 10px;
-    color: #ccc;
-    font-size: 28px;
-    line-height: 40px;
-    flex: 1;
-    font-family: 'Noto Serif KR';
-  }
-}
-
-.partition_animation {
-  float: right;
-  overflow: hidden;
-  position: relative;
-  width: 800px;
-  height: 440px;
-  .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center center;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    &.img1 {
-      animation-name: segment_partition1;
-      transform: scale(1.1) translateX(30px);
-    }
-    &.img2 {
-      animation-name: segment_partition2;
-      transform: scale(1.1) translateX(-30px);
-    }
-    &.img3 {
-      animation-name: segment_partition3;
-      transform: scale(1.1) translateX(30px);
-    }
-  }
-}
-
 @keyframes segment_partition1 {
   0% {
     opacity: 1;
@@ -265,7 +299,6 @@
     opacity: 1;
   }
 }
-
 @keyframes segment_partition2 {
   0% {
     transform: scale(1.1) translateX(-30px);
@@ -292,7 +325,6 @@
     transform: scale(1.1) translateX(-30px);
   }
 }
-
 @keyframes segment_partition3 {
   0% {
     opacity: 0;
@@ -310,74 +342,6 @@
   100% {
     opacity: 0;
     transform: scale(1) translateX(0);
-  }
-}
-
-.the_visual_wrap {
-  background-color: #001317;
-  margin: 50px auto;
-  width: 1280px;
-  padding: 20px;
-  overflow: hidden;
-
-  .text_area {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 80px;
-  }
-  .title {
-    width: 100%;
-    flex: 1;
-    color: #fff;
-    font-size: 50px;
-    line-height: 70px;
-    .hash {
-      display: block;
-      font-size: 100px;
-      color: #f90;
-      line-height: 100px;
-      font-family: 'Raleway';
-    }
-  }
-  .description {
-    margin-top: 10px;
-    color: #ccc;
-    font-size: 28px;
-    line-height: 40px;
-    flex: 1;
-    font-family: 'Noto Serif KR';
-  }
-}
-
-.the_animation {
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 800px;
-  height: 440px;
-  .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center center;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    &.img1 {
-      animation-name: segment_the1;
-      transform: scale(1.1) translateX(30px);
-    }
-    &.img2 {
-      animation-name: segment_the2;
-      transform: scale(1.1) translateX(-30px);
-    }
-    &.img3 {
-      animation-name: segment_the1_1;
-      transform: translateX(30px);
-    }
   }
 }
 @keyframes segment_the1 {
@@ -401,7 +365,6 @@
     opacity: 1;
   }
 }
-
 @keyframes segment_the1_1 {
   0% {
     opacity: 1;
@@ -423,7 +386,6 @@
     opacity: 1;
   }
 }
-
 @keyframes segment_the2 {
   50% {
     opacity: 0;
