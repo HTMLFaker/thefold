@@ -8,6 +8,7 @@ import Image from 'next/image';
 import MovieControl from '@/components/domControls/MovieControl';
 import Counter from '@/components/main/Counter';
 import AboutUs from '@/components/main/AboutUs';
+import CountWrapper from '@/components/main/CounterWrapper';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -26,12 +27,7 @@ export default function HomePage() {
           <section className="main_inner">
             <AboutUs />
 
-            <div className="counter_wrapper">
-              <Counter target={12147} duration={2000} />
-              <Counter target={9583} duration={2000} />
-              <Counter target={5345} duration={2000} />
-              <Counter target={14344} duration={2000} />
-            </div>
+            <CountWrapper />
 
             <div className="a">
               <div className="b"></div>

@@ -9,6 +9,7 @@ export default function MovieControl() {
         document.querySelector('.card_movie.partition'),
         document.querySelector('.card_movie.the'),
         document.querySelector('#aboutUs'),
+        document.querySelector('#countWrapper'),
       ];
 
       const scrollTop = document.documentElement.scrollTop;
