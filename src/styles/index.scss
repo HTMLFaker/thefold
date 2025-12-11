@@ -8,6 +8,9 @@
 @use 'footer';
 @use 'visual';
 @use 'main';
+
+@use 'main/count';
+
 @use 'movie';
 @use 'animation';
 
@@ -55,24 +58,6 @@ main {
   background-color: #fff;
 
   background: url('/c1.jpg') no-repeat 0 0 / 100% 100%;
-}
-
-.count_wrapper {
-  display: flex;
-  justify-content: center; /* 중앙 정렬 */
-  width: 100%;
-  background-color: #001317;
-  padding: 100px 0;
-  .count {
-  }
-}
-.count {
-  width: 25%;
-  text-align: center;
-  font-family: 'Archivo', 'Inter', 'Lato', 'Montserrat', 'Raleway', sans-serif;
-  font-size: 60px;
-  font-weight: 700;
-  color: #fff;
 }
 
 @media (max-width: 1024px) {
