@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use '../variables' as *;
 
 /* 공통 */
 .header {
@@ -178,7 +178,7 @@
           height: 1px;
         }
         &:hover {
-          background-color: rgba(172, 130, 40, 0.3);
+          background-color: rgba(35, 168, 35, 0.3);
           &:before {
             transform: rotate(360deg);
           }

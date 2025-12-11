@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 type CounterProps = {
   target: number;
@@ -9,61 +9,40 @@ type CounterProps = {
 
 export default function Counter({ target, duration = 3000 }: CounterProps) {
   const [value, setValue] = useState(0);
+  const startedRef = useRef(false);
   const rafIdRef = useRef<number | null>(null);
-  const startedRef = useRef(false); // 중복 시작 방지
   const selfRef = useRef<HTMLDivElement | null>(null);
 
-  const startAnimation = () => {
-    if (startedRef.current) return;
-    startedRef.current = true;
+  useEffect(() => {
+    const wrapper = selfRef.current?.closest('.count_wrapper');
+    if (!(wrapper instanceof HTMLElement)) return;
 
-    const start = performance.now();
+    const start = () => {
+      if (startedRef.current) return;
+      startedRef.current = true;
 
-    const update = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const current = Math.floor(progress * target);
-      setValue(current);
+      const startTime = performance.now();
 
-      if (progress < 1) {
-        rafIdRef.current = requestAnimationFrame(update);
-      }
+      const tick = (now: number) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        setValue(Math.floor(progress * target));
+        if (progress < 1) rafIdRef.current = requestAnimationFrame(tick);
+      };
+
+      rafIdRef.current = requestAnimationFrame(tick);
     };
 
-    rafIdRef.current = requestAnimationFrame(update);
-  };
+    if (wrapper.classList.contains('is_passed')) start();
 
-  useEffect(() => {
-    const node = selfRef.current;
-    if (!node) return;
-
-    const wrapper = node.closest('.count_wrapper') as HTMLElement | null;
-    if (!wrapper) return;
-
-    // 이미 is_passed 붙어 있는 상태면 바로 시작
-    if (wrapper.classList.contains('is_passed')) {
-      startAnimation();
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (m.type === 'attributes' && m.attributeName === 'class') {
-          if (wrapper.classList.contains('is_passed')) {
-            startAnimation();
-          }
-        }
-      }
+    const observer = new MutationObserver(() => {
+      if (wrapper.classList.contains('is_passed')) start();
     });
 
-    observer.observe(wrapper, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
+    observer.observe(wrapper, { attributes: true, attributeFilter: ['class'] });
 
     return () => {
       observer.disconnect();
-      if (rafIdRef.current !== null) {
-        cancelAnimationFrame(rafIdRef.current);
-      }
+      if (rafIdRef.current !== null) cancelAnimationFrame(rafIdRef.current);
     };
   }, [target, duration]);
 

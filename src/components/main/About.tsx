@@ -1,13 +1,11 @@
-'use client';
-
 import FoldingLine from '../common/FoldingLine';
 
-export default function AboutUs() {
+export default function About() {
   return (
     <div className="about" id="aboutUs">
-      <h2 className="about_title">
+      <h3 className="about_title">
         About Us <FoldingLine width={2} height={30} color={'#999'} />
-      </h2>
+      </h3>
       <p className="about_description">
         <span>
           저희 더폴드는 사람을 먼저 생각하는 기술을 연구해왔고, 내부와 외부의 소통을 중시하는

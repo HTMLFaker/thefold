@@ -4,14 +4,15 @@
 
 @use 'common';
 @use 'sprite';
-@use 'header';
-@use 'footer';
-@use 'visual';
-@use 'main';
+@use 'common/header';
+@use 'common/footer';
 
+@use 'main/visual';
+@use 'main/about';
 @use 'main/count';
+@use 'main/movie';
+@use 'main/special';
 
-@use 'movie';
 @use 'animation';
 
 html,
@@ -40,24 +41,6 @@ main {
       padding: 100px 20px;
     }
   }
-}
-
-.a {
-  overflow: hidden;
-}
-.b {
-  width: 700px;
-  height: 800px;
-  background-color: #001317;
-  float: right;
-}
-.c {
-  margin-top: 150px;
-  overflow: hidden;
-  height: 500px;
-  background-color: #fff;
-
-  background: url('/c1.jpg') no-repeat 0 0 / 100% 100%;
 }
 
 @media (max-width: 1024px) {

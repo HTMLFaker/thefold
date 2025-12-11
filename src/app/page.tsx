@@ -6,9 +6,10 @@ import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
 import Image from 'next/image';
 import MovieControl from '@/components/domControls/MovieControl';
-import Counter from '@/components/main/Counter';
-import AboutUs from '@/components/main/AboutUs';
-import CountWrapper from '@/components/main/CounterWrapper';
+
+import About from '@/components/main/About';
+import Count from '@/components/main/Count';
+import Special from '@/components/main/Special';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -25,14 +26,10 @@ export default function HomePage() {
         </section>
         <main className="main_wrapper">
           <section className="main_inner">
-            <AboutUs />
+            <About />
+            <Count />
+            <Special />
 
-            <CountWrapper />
-
-            <div className="a">
-              <div className="b"></div>
-              <div className="c"></div>
-            </div>
             <div className="card_movie glass">
               <div className="movie_area">
                 <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />

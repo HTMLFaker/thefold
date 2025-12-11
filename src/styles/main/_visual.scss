@@ -1,5 +1,7 @@
 .visual_wrapper {
-  background-color: #73572f;
+  // background-color: #73572f;
+  // background-color: #4e8122;
+  background-color: #000;
 
   &:before {
     position: absolute;
@@ -61,13 +63,18 @@
 
 .copy_wrapper {
   position: absolute;
-  bottom: 100px;
+  bottom: 0;
   left: 50%;
   width: 100%;
   max-width: 1280px;
   transform: translateX(-50%);
   .copy_inner {
-    padding: 0 20px;
+    padding: 0 20px 100px;
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
   }
   .copy_tag,
   .copy_title,
