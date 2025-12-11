@@ -6,6 +6,8 @@ import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
 import Image from 'next/image';
 import MovieControl from '@/components/domControls/MovieControl';
+import Counter from '@/components/main/Counter';
+import AboutUs from '@/components/main/AboutUs';
 
 export const metadata = {
   title: '더폴드 | 메인',
@@ -22,6 +24,19 @@ export default function HomePage() {
         </section>
         <main className="main_wrapper">
           <section className="main_inner">
+            <AboutUs />
+
+            <div className="counter_wrapper">
+              <Counter target={12147} duration={2000} />
+              <Counter target={9583} duration={2000} />
+              <Counter target={5345} duration={2000} />
+              <Counter target={14344} duration={2000} />
+            </div>
+
+            <div className="a">
+              <div className="b"></div>
+              <div className="c"></div>
+            </div>
             <div className="card_movie glass">
               <div className="movie_area">
                 <Image src={'/a1.jpg'} alt={''} width={1350} height={759} className={'img img1'} />
@@ -37,6 +52,14 @@ export default function HomePage() {
                   </h2>
                   <p className="description">
                     <span>국내 최소 유리간격</span> <span>2mm 적용</span>
+                  </p>
+                  <p className="action">
+                    <a href="#" className="btn">
+                      제품소개
+                    </a>
+                    <a href="#" className="btn">
+                      시공사례
+                    </a>
                   </p>
                 </div>
               </div>
@@ -54,6 +77,14 @@ export default function HomePage() {
                   </h2>
                   <p className="description">
                     <span>인테리어 시트 마감으로</span> <span>다양한 디자인</span>
+                  </p>
+                  <p className="action">
+                    <a href="#" className="btn">
+                      제품소개
+                    </a>
+                    <a href="#" className="btn">
+                      시공사례
+                    </a>
                   </p>
                 </div>
               </div>
@@ -77,6 +108,14 @@ export default function HomePage() {
                   </h2>
                   <p className="description">
                     <span>다양한 유리성능 적용으로</span> <span>실용성 극대화</span>
+                  </p>
+                  <p className="action">
+                    <a href="#" className="btn">
+                      제품소개
+                    </a>
+                    <a href="#" className="btn">
+                      시공사례
+                    </a>
                   </p>
                 </div>
               </div>

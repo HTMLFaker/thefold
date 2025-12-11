@@ -1,6 +1,14 @@
 'use client';
 
-const FoldingLine = ({ width, height }: { width: number; height: number }) => {
+const FoldingLine = ({
+  width,
+  height,
+  color,
+}: {
+  width: number;
+  height: number;
+  color: string;
+}) => {
   return (
     <div
       className="folding_line_start"
@@ -9,10 +17,30 @@ const FoldingLine = ({ width, height }: { width: number; height: number }) => {
         height: `${height}px`,
       }}
     >
-      <span className="folding_line folding_line1" />
-      <span className="folding_line folding_line2">
-        <span className="folding_line folding_line3">
-          <span className="folding_line folding_line4" />
+      <span
+        className="folding_line folding_line1"
+        style={{
+          backgroundColor: color,
+        }}
+      />
+      <span
+        className="folding_line folding_line2"
+        style={{
+          backgroundColor: color,
+        }}
+      >
+        <span
+          className="folding_line folding_line3"
+          style={{
+            backgroundColor: color,
+          }}
+        >
+          <span
+            className="folding_line folding_line4"
+            style={{
+              backgroundColor: color,
+            }}
+          />
         </span>
       </span>
     </div>

@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <footer className="footer">푸터</footer>;
+  return (
+    <footer className="footer">
+      <div className="footer_inner">footer</div>
+    </footer>
+  );
 }

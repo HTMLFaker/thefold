@@ -8,6 +8,7 @@ export default function MovieControl() {
         document.querySelector('.card_movie.glass'),
         document.querySelector('.card_movie.partition'),
         document.querySelector('.card_movie.the'),
+        document.querySelector('#aboutUs'),
       ];
 
       const scrollTop = document.documentElement.scrollTop;

@@ -1,0 +1,44 @@
+.about {
+  padding-bottom: 100px;
+  .about_title {
+    font-size: 50px;
+    line-height: 55px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    position: relative;
+    .folding_line_start {
+      display: inline-block;
+      vertical-align: center;
+      margin-left: 10px;
+    }
+    transform: translateY(100px);
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+  }
+  .about_description {
+    // color: #001317;
+    color: #555;
+    margin-top: 25px;
+    font-size: 25px;
+
+    span {
+      display: block;
+    }
+    transition: 0.3s all ease-in-out 0.15s;
+    transform: translateY(100px);
+    opacity: 0;
+    &.sub {
+      transition: 0.3s all ease-in-out 0.3s;
+    }
+  }
+  &.is_passed {
+    .about_title {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .about_description {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

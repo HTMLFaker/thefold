@@ -54,7 +54,7 @@
         display: block;
         margin-bottom: 20px;
         font-size: 100px;
-        color: #f90;
+        color: #fecd8c;
         line-height: 72px;
         font-family: 'Raleway', sans-serif;
       }
@@ -68,6 +68,20 @@
       font-family: 'Noto Serif KR', sans-serif;
       span {
         display: block;
+      }
+    }
+    .action {
+      margin-top: 20px;
+      .btn {
+        display: inline-block;
+        vertical-align: top;
+        color: #001317;
+        background-color: #fecd8c;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin: 0 5px;
       }
     }
   }
