@@ -23,11 +23,12 @@
     .itm {
       overflow: hidden;
       margin: 100px 0 0;
+      border-top: 1px solid #4e8122;
 
       &.itm2,
       &.itm4 {
         .thumb {
-          float: right;
+          //   float: right;
         }
       }
     }
