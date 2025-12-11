@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState, ReactNode } from 'react';
 
-type GlassFaderProps = {
+type FaderProps = {
   children: ReactNode;
   intervalMs: number[]; // 각 child 별 duration
 };
 
-export default function GlassFader(props: GlassFaderProps) {
+export default function Fader(props: FaderProps) {
   const { children, intervalMs } = props;
 
   const childArray = React.Children.toArray(children);

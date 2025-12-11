@@ -11,7 +11,7 @@
     display: block;
     font-family: 'Raleway', 'Pretendard', sans-serif;
     background: url('/logo.png') no-repeat 0 0 / 80px 80px;
-    transition: 0.15s all ease-in-out;
+    transition: $transition-fast;
     padding: 10px 10px 10px 80px;
     white-space: nowrap;
     .title {

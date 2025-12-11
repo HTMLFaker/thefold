@@ -1,0 +1,43 @@
+.sub_visual {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 2560px;
+  height: 500px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1;
+    content: '';
+  }
+  .glass_fader_wrapper {
+    inset: 0;
+    transition: opacity 1s ease-in-out;
+
+    .fader_item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      &.active {
+        opacity: 1;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

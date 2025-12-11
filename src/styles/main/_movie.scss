@@ -1,9 +1,59 @@
+@use '../variables' as *;
+
+.movie_wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 200px;
+  // &:before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0 solid transparent;
+  //   border-bottom: 500px solid $point-color;
+  //   border-right: 3150px solid transparent;
+  //   transform: translateX(-50%);
+  //   z-index: -1;
+  //   content: '';
+  // }
+  // &:after {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 50%;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 500px solid $point-color;
+  //   border-bottom: 0 solid transparent;
+  //   border-left: 3150px solid transparent;
+  //   transform: translateX(-50%);
+  //   z-index: -1;
+  //   content: '';
+  // }
+  .movie_title {
+    font-size: 50px;
+    line-height: 78px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    // transform: translateY(100px);
+    // transition: 0.3s all ease-in-out;
+    // opacity: 0;
+  }
+  .movie_description {
+    color: #666;
+    font-size: 25px;
+    line-height: 38px;
+    // transition: 0.3s all ease-in-out 0.15s;
+    // transform: translateY(100px);
+    // opacity: 0;
+  }
+}
 .card_movie {
   overflow: hidden;
-  padding: 20px;
-  background-color: #001317;
+  // padding: 20px;
+  // background-color: $point-blue-color;
   height: 440px;
-  margin-top: 50px;
+  margin-top: 100px;
   transition: 0.3s all ease-in-out;
   .movie_area {
     float: left;
@@ -12,6 +62,7 @@
     width: 800px;
     height: 100%;
     margin-right: 20px;
+    border-radius: 20px;
     .img {
       position: absolute;
       top: 0;
@@ -47,21 +98,24 @@
     .title {
       width: 100%;
       flex: 1;
-      color: #fff;
+      color: #000;
       font-size: 50px;
+      font-weight: 700;
       line-height: 50px;
+      letter-spacing: -2px;
       .hash {
         display: block;
         margin-bottom: 20px;
         font-size: 100px;
-        color: #fecd8c;
+        font-weight: 700;
+        color: $point-color;
         line-height: 72px;
         font-family: 'Raleway', sans-serif;
       }
     }
     .description {
       margin-top: 10px;
-      color: #ccc;
+      color: #666;
       font-size: 28px;
       line-height: 40px;
       flex: 1;
@@ -73,15 +127,14 @@
     .action {
       margin-top: 20px;
       .btn {
-        display: inline-block;
         vertical-align: top;
-        color: #001317;
-        background-color: #fecd8c;
-        font-size: 20px;
-        font-weight: 700;
+        color: #fff;
+        background-color: #4e8122;
+        border-radius: 5px;
         padding: 10px 20px;
-        border-radius: 10px;
-        margin: 0 5px;
+        font-size: 20px;
+        line-height: 25px;
+        display: inline-block;
       }
     }
   }
@@ -114,7 +167,7 @@
   }
   &.partition {
     transform: translateX(100px);
-    background-color: #73572f;
+    // background-color: #73572f;
     .movie_area {
       float: right;
       margin-right: 0;

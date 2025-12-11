@@ -27,7 +27,6 @@
       opacity: 1;
     }
   }
-
   .lst {
     margin: 100px 0 0;
     .itm {
@@ -38,7 +37,7 @@
       transform: translateX(-200px);
       opacity: 0;
       &:before {
-        z-index: 2;
+        z-index: 1;
         position: absolute;
         top: 0;
         left: 0;
@@ -48,13 +47,6 @@
         transition: 0.5s all ease-in-out 0.5s;
         opacity: 0;
         content: '';
-      }
-
-      &.itm2,
-      &.itm4 {
-        .thumb {
-          //   float: right;
-        }
       }
       &.is_passed {
         transform: translateX(0);
@@ -71,7 +63,8 @@
         .index,
         .tit,
         .des1,
-        .des2 {
+        .des2,
+        .action {
           transform: translateY(0);
           opacity: 1;
         }
@@ -84,12 +77,6 @@
       overflow: hidden;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-      &:before {
-      }
-      &:hover {
-        &:before {
-        }
-      }
       img {
         display: block;
         width: 100%;
@@ -102,6 +89,15 @@
       overflow: hidden;
       padding: 50px;
     }
+    .index,
+    .tit,
+    .des1,
+    .des2,
+    .action {
+      transform: translateY(100px);
+      transition: 0.3s all ease-in-out;
+      opacity: 0;
+    }
     .index {
       color: $point-color;
       font-family: 'Archivo', sans-serif;
@@ -109,9 +105,7 @@
       font-weight: 700;
       line-height: 100px;
       font-style: italic;
-      transition: 0.3s all ease-in-out 0.15s;
-      transform: translateY(100px);
-      opacity: 0;
+      transition-delay: 0.15s;
     }
     .tit {
       color: $point-color;
@@ -119,27 +113,35 @@
       font-size: 50px;
       line-height: 70px;
       font-weight: 300;
-      transition: 0.3s all ease-in-out 0.3s;
-      transform: translateY(100px);
-      opacity: 0;
+      transition-delay: 0.3s;
     }
     .des1 {
       margin: 20px 0 0;
       letter-spacing: -1px;
       font-size: 35px;
       line-height: 48px;
-      transition: 0.3s all ease-in-out 0.45s;
-      transform: translateY(100px);
-      opacity: 0;
+      transition-delay: 0.45s;
     }
     .des2 {
-      margin: 20px 0 0;
+      margin: 10px 0 0;
       color: #666;
       font-size: 25px;
       line-height: 38px;
-      transition: 0.3s all ease-in-out 0.6s;
-      transform: translateY(100px);
-      opacity: 0;
+      transition-delay: 0.6s;
+    }
+    .action {
+      margin-top: 20px;
+      transition-delay: 0.9s;
+      .lnk {
+        display: inline-block;
+        vertical-align: top;
+        background-color: $point-color;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        line-height: 25px;
+        border-radius: 5px;
+      }
     }
   }
 }

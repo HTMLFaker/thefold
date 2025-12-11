@@ -24,6 +24,11 @@ export default function Special() {
               모든 폴딩도어에 스테인리스 베어링을 기본 적용하여 습기·온도 변화에도 녹 발생을
               억제하고 부드러운 개폐감을 유지합니다.
             </p>
+            <p className="action">
+              <a href="#" className="lnk">
+                글라스 폴딩도어 제폼소개
+              </a>
+            </p>
           </div>
         </li>
         <li className="itm itm2" id="specialItem2">
@@ -35,6 +40,11 @@ export default function Special() {
             <h4 className="tit">Custom Product</h4>
             <p className="des1">&quot;맞춤형 설계 시스템&quot;</p>
             <p className="des2">공간의 용도와 구조에 맞춰, 최적의 폴딩도어를 설계·제작합니다.</p>
+            <p className="action">
+              <a href="#" className="lnk">
+                칸막이 폴딩도어 제폼소개
+              </a>
+            </p>
           </div>
         </li>
         <li className="itm itm3" id="specialItem3">
@@ -46,6 +56,11 @@ export default function Special() {
             <h4 className="tit">Best Product</h4>
             <p className="des1">&quot;누구보다 빠른 견적&quot;</p>
             <p className="des2">고객님의 시간은 소중하니까 누구보다 빠르게 견적을 전달드립니다.</p>
+            <p className="action">
+              <a href="#" className="lnk">
+                the 폴딩도어 제폼소개
+              </a>
+            </p>
           </div>
         </li>
         <li className="itm itm4" id="specialItem4">
@@ -57,6 +72,11 @@ export default function Special() {
             <h4 className="tit">Nice Product</h4>
             <p className="des1">&quot;무한신뢰 책임시공&quot;</p>
             <p className="des2">폴딩도어만 잘 만드는게 아닌 마무리까지 확실한 더폴드입니다.</p>
+            <p className="action">
+              <a href="#" className="lnk">
+                단열 폴딩도어 제폼소개
+              </a>
+            </p>
           </div>
         </li>
       </ul>

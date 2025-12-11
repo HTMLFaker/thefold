@@ -1,6 +1,12 @@
+@use '../variables' as *;
+
 .footer {
-  background-color: #001317;
   .footer_inner {
+    background-color: $point-blue-color;
     height: 500px;
+    max-width: 2560px;
+    margin: 0 auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
 }

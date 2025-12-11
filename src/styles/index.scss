@@ -12,8 +12,11 @@
 @use 'main/count';
 @use 'main/movie';
 @use 'main/special';
+@use 'main/inquiry';
 
-@use 'animation';
+@use 'common/folding_line';
+
+@use 'sub/sub_visual';
 
 html,
 body {
@@ -25,7 +28,7 @@ body {
   // background-color: #fecd8c;
 }
 
-.wrapper {
+.app {
   min-height: 100%;
   display: flex;
   flex-direction: column;
