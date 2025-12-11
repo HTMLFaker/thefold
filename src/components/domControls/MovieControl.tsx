@@ -10,7 +10,17 @@ export default function MovieControl() {
         document.querySelector('.card_movie.the'),
         document.querySelector('#aboutUs'),
         document.querySelector('#countWrapper'),
+
+        document.querySelector('#specialItem1'),
+        document.querySelector('#specialItem2'),
+        document.querySelector('#specialItem3'),
+        document.querySelector('#specialItem4'),
+
+        document.querySelector('#mainSpecialTitle'),
+        document.querySelector('#mainSpecialDescription'),
       ];
+
+      console.log(document.querySelector('#mainSpecial'));
 
       const scrollTop = document.documentElement.scrollTop;
       const clientHeight = document.documentElement.clientHeight;
@@ -26,6 +36,7 @@ export default function MovieControl() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

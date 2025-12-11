@@ -19,6 +19,9 @@ export default function HeaderControl() {
       if (!hd) return;
 
       if (current <= 0) {
+        // const passedElements = document.querySelectorAll('.is_passed');
+        // passedElements.forEach((el) => el.classList.remove('is_passed'));
+
         hd.classList.remove('is_scroll_down', 'is_scroll_up');
         lastScroll.current = current;
         return;
