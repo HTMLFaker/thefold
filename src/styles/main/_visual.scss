@@ -134,7 +134,9 @@
     }
 
     .copy_wrapper {
-      bottom: 30px;
+      .copy_inner {
+        padding-bottom: 50px;
+      }
       .copy_tag {
         font-size: 14px;
       }

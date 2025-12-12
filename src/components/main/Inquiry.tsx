@@ -10,7 +10,14 @@ export default function Inquiry() {
           className="map_frame"
         />
       </div>
-      <div className="location_info">asdfgasdfasdfasdf</div>
+      <div className="location_info">
+        <a href="https://naver.me/xBMmZpLY" target="_blank">
+          네이버 지도보기
+        </a>
+        <a href="https://kko.kakao.com/in9ohbiqtg" target="_blank">
+          카카오 지도보기
+        </a>
+      </div>
     </div>
   );
 }
