@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .visual_wrapper {
   // background-color: #73572f;
   // background-color: #4e8122;
@@ -94,34 +96,37 @@
     }
   }
   .copy_tag {
-    color: rgb(116, 74, 10);
-    font-family: 'Noto Serif KR';
-    font-size: 22px;
-    line-height: 22px;
+    padding: 5px;
+
+    color: $point-color;
+    font-size: 2rem;
     font-weight: 700;
+    font-family: 'Noto Serif KR', serif;
+
     transition-delay: 3s;
     background-color: #fff;
-    padding: 5px;
   }
   .copy_title {
     margin-top: 20px;
+
     color: #fff;
-    font-family: 'pretendard';
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 5rem;
     font-weight: 700;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-family: 'pretendard', sans-serif;
+
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     transition-delay: 1s;
   }
   .copy_description {
     margin-top: 10px;
+
     color: #fff;
-    font-family: 'Noto Serif KR';
-    font-size: 25px;
-    line-height: 1.5;
+    font-size: 2.5rem;
     font-weight: 400;
+    font-family: 'Noto Serif KR', serif;
+
     transition-delay: 2s;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 15);
 
     span {
       display: block;

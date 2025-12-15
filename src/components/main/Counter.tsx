@@ -14,7 +14,7 @@ export default function Counter({ target, duration = 3000 }: CounterProps) {
   const selfRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const wrapper = selfRef.current?.closest('.count_wrapper');
+    const wrapper = selfRef.current?.closest('#constructionCount');
     if (!(wrapper instanceof HTMLElement)) return;
 
     const start = () => {

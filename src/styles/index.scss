@@ -8,8 +8,8 @@
 @use 'common/footer';
 
 @use 'main/visual';
-@use 'main/about';
-@use 'main/count';
+@use 'main/about_us';
+@use 'main/construction_count';
 @use 'main/movie';
 @use 'main/special';
 @use 'main/inquiry';
@@ -23,9 +23,10 @@ body {
   height: 100%;
 }
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // background-color: #fecd8c;
+  line-height: 1.5;
 }
 
 .app {

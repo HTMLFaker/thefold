@@ -10,18 +10,22 @@
   .header_brand {
     display: block;
     font-family: 'Raleway', 'Pretendard', sans-serif;
-    background: url('/logo.png') no-repeat 0 0 / 80px 80px;
+    background: url('/logo.png') no-repeat 0 10px / 60px 60px;
     transition: $transition-fast;
-    padding: 10px 10px 10px 80px;
+    padding: 10px 10px 10px 70px;
     white-space: nowrap;
     .title {
+      margin-left: -10px;
+
       color: #fff;
+
+      font-size: 3rem;
+      line-height: 36px;
       font-weight: 300;
-      font-size: 33px;
-      line-height: 40px;
     }
     .slogan {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.5);
+
       font-weight: 400;
       font-size: 15px;
       line-height: 20px;
@@ -203,7 +207,7 @@
 @media (max-width: 1023px) {
   .header {
     top: 10px;
-    padding: 0 10px;
+    padding: 0 20px;
     &.is_scroll_down {
       top: -70px;
     }
@@ -241,8 +245,8 @@
       }
     }
     .header_brand {
-      background-size: 70px;
-      padding-left: 70px;
+      background-size: 50px;
+      padding-left: 60px;
       .title {
         font-size: 22px;
         line-height: 30px;

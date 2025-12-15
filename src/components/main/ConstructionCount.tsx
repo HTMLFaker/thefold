@@ -1,10 +1,10 @@
 import Counter from './Counter';
 
-export default function Count() {
+export default function ConstructionCount() {
   return (
-    <div id="countWrapper" className="count_wrapper">
-      <h3 className="count_title">압도적 시공 경험, 검증된 기술력</h3>
-      <p className="count_description">꾸준히 선택받아온 이유, 시공 품질로 증명합니다.</p>
+    <div className="construction_count" id="constructionCount">
+      <h3 className="title">압도적 시공 경험, 검증된 기술력</h3>
+      <p className="description">꾸준히 선택받아온 이유, 시공 품질로 증명합니다.</p>
       <div className="count_inner">
         <div className="box">
           <div className="donut donut1">

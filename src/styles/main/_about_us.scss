@@ -1,0 +1,65 @@
+@use '../variables' as *;
+
+.about_us {
+  .title,
+  .description {
+    transform: translateY(100px);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .title {
+    color: $title-color;
+    font-size: 5rem;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+
+    .folding_line_start {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+  .description {
+    margin-top: 25px;
+
+    color: $description-color;
+    font-size: 2.5rem;
+
+    transition-delay: 0.15s;
+    span {
+      display: block;
+    }
+
+    &.sub {
+      transition-delay: 0.3s;
+    }
+  }
+  &.is_passed {
+    .title,
+    .description {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .about_us {
+    .title {
+      font-size: 3rem;
+
+      .folding_line_start {
+        width: 1px !important;
+        height: 20px !important;
+      }
+    }
+    .description {
+      font-size: 2rem;
+
+      span {
+        display: inline;
+      }
+    }
+  }
+}

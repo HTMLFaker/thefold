@@ -5,8 +5,8 @@ import React from 'react';
 import Footer from './_components/Footer';
 import VisualFader from '@/components/main/VisualFader';
 
-import About from '@/components/main/About';
-import Count from '@/components/main/Count';
+import AboutUs from '@/components/main/AboutUs';
+import ConstructionCount from '@/components/main/ConstructionCount';
 import Special from '@/components/main/Special';
 import Movie from '@/components/main/Movie';
 import MovieControl from '@/components/domControls/MovieControl';
@@ -27,8 +27,8 @@ export default function HomePage() {
         </section>
         <main className="main_wrapper">
           <section className="main_inner">
-            <About />
-            <Count />
+            <AboutUs />
+            <ConstructionCount />
             <Special />
             <Inquiry />
             <Movie />

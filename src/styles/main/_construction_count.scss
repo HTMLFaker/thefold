@@ -5,7 +5,6 @@
   width: 250px;
   height: 250px;
   border-radius: 100%;
-  background-color: #fff;
   overflow: hidden;
   position: relative;
   opacity: 0;
@@ -15,10 +14,7 @@
   background-color: #ccc;
   .donut_inner {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
+    inset: 10px;
     background-color: #fff;
     border-radius: 100%;
     white-space: nowrap;
@@ -35,14 +31,12 @@
       content: '';
     }
     .sub_title {
-      color: #666;
+      color: $description-color;
       font-size: 15px;
-      line-height: 25px;
     }
     .title {
-      color: #305310;
+      color: $point-color;
       font-size: 20px;
-      line-height: 30px;
       font-weight: 400;
     }
   }
@@ -130,44 +124,40 @@
   }
 }
 
-.count_wrapper {
+.construction_count {
   margin: 200px 0 0;
-  .count_title {
-    font-size: 50px;
-    line-height: 78px;
-    font-weight: 300;
-    letter-spacing: -2px;
+  .title,
+  .description {
     transform: translateY(100px);
-    transition: 0.3s all ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
   }
-  .count_description {
-    color: #666;
-    font-size: 25px;
-    line-height: 38px;
-    transition: 0.3s all ease-in-out 0.15s;
-    transform: translateY(100px);
-    opacity: 0;
+  .title {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+  }
+  .description {
+    color: $description-color;
+    font-size: 2.5rem;
+
+    transition-delay: 0.15s;
   }
   .count_inner {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     margin: 50px 0 0;
-    .box {
-      text-align: center;
-    }
+
     .count {
-      text-align: center;
-      font-family: 'Archivo', sans-serif;
-      font-size: 40px;
-      font-weight: 700;
       color: $point-color;
+      font-size: 4rem;
+      font-weight: 700;
+      font-family: 'Archivo', sans-serif;
     }
   }
   &.is_passed {
-    .count_title,
-    .count_description {
+    .title,
+    .description {
       transform: translateY(0);
       opacity: 1;
     }
@@ -216,38 +206,32 @@
 
 @media (max-width: 1023px) {
   .donut {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     .donut_inner {
+      inset: 5px;
       .title {
-        font-size: 15px;
+        font-size: 1.5rem;
       }
     }
   }
-  .count_wrapper {
+  .construction_count {
     margin-top: 100px;
-    .count_title {
-      font-size: 30px;
-      line-height: 40px;
+    .title {
+      font-size: 3rem;
     }
-    .count_description {
-      font-size: 20px;
-      line-height: 30px;
+    .description {
+      font-size: 2rem;
     }
     .count_inner {
-      display: block;
-      overflow: hidden;
+      flex-wrap: wrap;
+      row-gap: 20px;
 
       .box {
-        float: left;
-        width: 50%;
-        &:nth-child(3),
-        &:nth-child(4) {
-          margin-top: 50px;
-        }
+        flex-basis: calc(50%);
       }
       .count {
-        font-size: 30px;
+        font-size: 2.5rem;
       }
     }
   }

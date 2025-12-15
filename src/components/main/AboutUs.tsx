@@ -1,19 +1,19 @@
 import FoldingLine from '../common/FoldingLine';
 
-export default function About() {
+export default function AboutUs() {
   return (
-    <div className="about" id="aboutUs">
-      <h3 className="about_title">
+    <div className="about_us" id="aboutUs">
+      <h3 className="title">
         About Us <FoldingLine width={2} height={30} color={'#999'} />
       </h3>
-      <p className="about_description">
+      <p className="description">
         <span>
           저희 더폴드는 사람을 먼저 생각하는 기술을 연구해왔고, 내부와 외부의 소통을 중시하는
           시공경험을 바탕으로 하여
         </span>
         <span>빠르고 정확하며 안정적으로 고객의 환경을 창조해왔습니다.</span>
       </p>
-      <p className="about_description sub">
+      <p className="description sub">
         <span>
           고객의 만족을 회사의 자부심으로 생각하며, 항상 고객의 행복을 최우선의 목표로 일해왔기에
         </span>
