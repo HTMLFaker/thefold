@@ -46,11 +46,11 @@ main {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   main {
     &.main_wrapper {
       .main_inner {
-        padding: 0 20px;
+        padding: 50px 20px;
       }
     }
   }

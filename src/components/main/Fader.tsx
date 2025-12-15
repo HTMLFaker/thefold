@@ -31,7 +31,7 @@ export default function Fader(props: FaderProps) {
 
   return (
     <React.Fragment>
-      <div className="glass_fader_wrapper">
+      <div className="fader_wrapper">
         {childArray.map((child, i) => (
           <div key={i} className={`fader_item fader_item${i} ${i === index ? 'active' : ''}`}>
             {child}

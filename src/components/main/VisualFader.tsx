@@ -13,7 +13,7 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image: '/visual1.jpg',
+    image: '/crop5.jpg',
     tag: '#글라스폴딩도어',
     title: '투명하게 여는 개방감',
     description1: '글라스 폴딩도어로 공간을 잇고',
@@ -27,7 +27,7 @@ const slides: Slide[] = [
     description2: '개방감과 디자인을 놓치지 마세요',
   },
   {
-    image: '/visual3.jpg',
+    image: '/crop3.jpg',
     tag: '#일반폴딩도어',
     title: '튼튼함과 실용성의 기본',
     description1: '견고함과 실용성으로 어떤 공간에도',

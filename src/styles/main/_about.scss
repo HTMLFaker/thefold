@@ -19,7 +19,6 @@
     margin-top: 25px;
     font-size: 25px;
     line-height: 38px;
-
     span {
       display: block;
     }
@@ -31,13 +30,26 @@
     }
   }
   &.is_passed {
-    .about_title {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    .about_title,
     .about_description {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .about {
+    .about_title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .about_description {
+      font-size: 20px;
+      line-height: 30px;
+      span {
+        display: inline;
+      }
     }
   }
 }
