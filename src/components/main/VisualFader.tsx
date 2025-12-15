@@ -19,20 +19,20 @@ const slides: Slide[] = [
     description1: '글라스 폴딩도어로 공간을 잇고',
     description2: '시야를 넓혀 보세요',
   },
-  {
-    image: '/visual2.jpg',
-    tag: '#칸막이폴딩도어',
-    title: '공간을 나누는 새로운 방식',
-    description1: '칸막이 폴딩도어로 공간을 나누면서도',
-    description2: '개방감과 디자인을 놓치지 마세요',
-  },
-  {
-    image: '/crop3.jpg',
-    tag: '#일반폴딩도어',
-    title: '튼튼함과 실용성의 기본',
-    description1: '견고함과 실용성으로 어떤 공간에도',
-    description2: '안정적인 분리를 제공합니다',
-  },
+  // {
+  //   image: '/visual2.jpg',
+  //   tag: '#칸막이폴딩도어',
+  //   title: '공간을 나누는 새로운 방식',
+  //   description1: '칸막이 폴딩도어로 공간을 나누면서도',
+  //   description2: '개방감과 디자인을 놓치지 마세요',
+  // },
+  // {
+  //   image: '/visual3.jpg',
+  //   tag: '#일반폴딩도어',
+  //   title: '튼튼함과 실용성의 기본',
+  //   description1: '견고함과 실용성으로 어떤 공간에도',
+  //   description2: '안정적인 분리를 제공합니다',
+  // },
 ];
 
 const VisualFader = () => {
