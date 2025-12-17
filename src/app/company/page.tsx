@@ -1,6 +1,6 @@
 import Fader from '@/components/main/Fader';
-import Footer from '../_components/Footer';
-import Header from '../_components/Header';
+import Footer from '../_components/_common/Footer';
+import Header from '../_components/_common/Header';
 import Image from 'next/image';
 
 export const metadata = {
@@ -15,8 +15,8 @@ export default function CompanyPage() {
       <section className="sub_visual_wrapper">
         <div className="sub_visual">
           <Fader intervalMs={[10000, 10000]}>
-            <Image src={'/v3.jpg'} width={1920} height={655} alt={''} />
-            <Image src={'/visual1.jpg'} width={1920} height={655} alt={''} />
+            <Image src={'/nuk1.jpg'} width={2560} height={1099} alt={''} />
+            <Image src={'/nuk1.jpg'} width={2560} height={1099} alt={''} />
           </Fader>
         </div>
       </section>

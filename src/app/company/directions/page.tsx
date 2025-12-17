@@ -1,5 +1,5 @@
-import Footer from '@/app/_components/Footer';
-import Header from '@/app/_components/Header';
+import Footer from '@/app/_components/_common/Footer';
+import Header from '@/app/_components/_common/Header';
 import Fader from '@/components/main/Fader';
 
 import Image from 'next/image';

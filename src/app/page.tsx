@@ -1,16 +1,16 @@
 import { HomeClient } from '@/components/HomeClient';
 import { UploadImageClient } from '@/components/UploadImageClient';
-import Header from './_components/Header';
+import Header from './_components/_common/Header';
 import React from 'react';
-import Footer from './_components/Footer';
+import Footer from './_components/_common/Footer';
 import VisualFader from '@/components/main/VisualFader';
 
-import AboutUs from '@/components/main/AboutUs';
-import ConstructionCount from '@/components/main/ConstructionCount';
-import Special from '@/components/main/Special';
-import Movie from '@/components/main/Movie';
+import AboutUs from '@/app/_components/main/AboutUs';
+import ConstructionCount from '@/app/_components/main/ConstructionCount';
+import Special from '@/app/_components/main/Special';
+import Movie from '@/app/_components/main/Movie';
 import MovieControl from '@/components/domControls/MovieControl';
-import Inquiry from '@/components/main/Inquiry';
+import Inquiry from '@/app/_components/main/Inquiry';
 
 export const metadata = {
   title: '더폴드 | 메인',

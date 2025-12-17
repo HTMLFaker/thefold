@@ -1,4 +1,4 @@
-import FoldingLine from '../common/FoldingLine';
+import FoldingLine from '../../../components/common/FoldingLine';
 
 export default function AboutUs() {
   return (
